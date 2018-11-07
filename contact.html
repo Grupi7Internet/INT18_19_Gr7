@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+	<table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" name="name" placeholder="Name">
+                        </td>
+                        <td>
+                            <input type="email" name="email" placeholder="Email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="text" name="phone" onchange="ReplaceWord(this);" placeholder="Phone Number"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <textarea placeholder="Message" name="message" rows="6"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ol id="errors">
+
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input id="submit_transform" type="submit" name="submit"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+
+</body>
+</html>
