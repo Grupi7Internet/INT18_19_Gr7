@@ -310,4 +310,34 @@ footer {
 	padding: 7px 20px;
 }
 
+.footer-col h3, .footer-col h4 {
+	color: #6e6363;
+	font-family: Modia;
+	font-size: 12pt;
+}
 
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+
+.footer-col p {
+	font-size: 10pt;
+	color: #8a8989;
+}
+
+.footer-col a {
+	font-size: 10pt;
+	color: blue;
+}
+
+
+.footer-end p{
+	font-size: 10pt;
+	color: #8a8989;
+}
