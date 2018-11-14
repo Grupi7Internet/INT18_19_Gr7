@@ -281,4 +281,33 @@ footer {
 	margin: 0px;
 }
 
+.footer-col ul li {
+	border-bottom: 1px solid #d2cccc;
+	padding-bottom: 2px;
+	margin: 15px 0px;
+}
+
+.footer-col ul li a {
+	text-decoration: none;	
+	color: #8a8989;
+
+}
+
+
+.footer-col input[type="email"], .footer-col input[type="text"] {
+	border: none;
+	background-color: white;
+	border-radius: 20px;
+	padding: 7px;
+	margin-bottom: 10px;
+}
+
+.footer-col input[type="submit"]{
+	background-color: purple;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	padding: 7px 20px;
+}
+
 
