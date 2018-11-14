@@ -1,0 +1,37 @@
+footer {
+	background-color: #353535;
+	padding: 10px;	
+	margin-top: 30px;
+}
+
+.footer-col {
+	width: 28%;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	padding: 0% 2.5%;
+}
+
+.footer-col div, .footer-col ul, .footer-col address{
+	text-align: left;
+}
+ 
+.footer-col ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.footer-col ul li {
+	border-bottom: 1px solid #d2cccc;
+	padding-bottom: 2px;
+	margin: 15px 0px;
+	color: white;
+}
+
+.footer-col ul li a {
+	text-decoration: none;	
+	color: white;
+
+}
+
