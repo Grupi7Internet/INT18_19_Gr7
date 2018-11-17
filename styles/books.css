@@ -107,5 +107,28 @@
   	background-color: black;
  }
 
+ #FullDiv {
+ 	display: none;
+ 	background-color: #000000d9;
+ 	position: fixed;
+ 	top: 0; right: 0; bottom: 0; left: 0;
+ }
 
+.DivList{
+	 width: 49%;
+	 margin-top: 30px;
+	 display:inline-block;
+	 vertical-align: top;
+	 color: white;
+	 font-family: niramit;
+	 font-size: 14pt;
+}
+
+.DivList dd{
+	font-style: italic;
+}
+
+.DivList dt {
+	font-weight: bold;
+}
 
