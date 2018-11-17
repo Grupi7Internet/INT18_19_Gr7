@@ -1,0 +1,32 @@
+﻿ body {
+ 	background: cadetblue !important;
+ 	font-family: niramit;
+ }
+
+.mainContainer {
+	margin-top: 40px;
+}
+
+.mainContainer h2 {
+	font-size: 29pt;
+	font-family: niramit, serif;
+}
+
+#divImg {
+	background-color: red;
+	width: 500px;
+	height: 400px;
+	position: relative;
+}
+
+.scroll {
+	height: 400px;
+	overflow-y: scroll;
+}
+
+.leftContainer{
+	float: left;
+	width: 60%;
+}
+
+
