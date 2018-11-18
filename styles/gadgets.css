@@ -1,0 +1,83 @@
+body {
+background: #f8f8ff;
+opacity:0.9;
+}
+
+.LinksAboutTech
+{
+	
+         margin:50px 20px;
+            transition: 0.5s;
+}
+.LinksAboutTech h2
+{
+	margin: 0px;
+	padding-bottom: 30px;
+	padding-top: 25px;
+    text-align: center;
+font-family: Myriad;
+padding-left: 50px;
+background: linear-gradient(30deg, black, white 99%);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.LinksAboutTech p
+{
+font-family: arial;
+font-size: 20px;
+font-weight: bold;
+background:linear-gradient(45deg, #09009f, #00ff95 80%);
+            -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   transition: 0.3s;
+
+}
+
+.PhotosAboutGadgets {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+.LinksAboutTech img
+{
+width: 300px;
+transition: 0.3s;
+border: lightgreen solid 5px;
+border-radius: 15px;
+box-shadow: 15px 5px gradient(45deg, #09009f, #00ff95 80%); ;
+
+}
+.LinksAboutTech img:hover
+{
+transform: rotateX(45deg);
+width: 300px;
+border: white solid 5px;
+box-shadow: 5px 5px lightgreen;
+
+
+}
+
+.LinksAboutTech a
+{
+	text-decoration: none;
+	border-radius: 5px;
+	transition: 0.3s;
+}
+.LinksAboutTech a:hover
+{
+background:linear-gradient(45deg, grey, grey 80%);
+            -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.LinksAboutTech p:hover
+{
+font-family: arial;
+font-size: 20px;
+transform: translate(30px);
+font-weight: bold;
+background:linear-gradient(45deg, grey, grey 80%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+opacity: 0.9;
+}
