@@ -40,3 +40,50 @@
 	text-align: right;
 	width: 40%;
 }
+.rightContainer li {
+	
+	padding: 20px;
+
+}
+
+
+.grid {
+	margin-top: 0px;
+	display: inline-block;
+}
+.grid ul {
+	padding: 0px;
+	margin: 0px;
+}
+.grid ul li{
+	display: inline-block;
+	padding: 5px;
+}
+
+.grid-item1 {
+	width: 130px;
+	height: 180px;
+}
+
+.gid-item1 img {
+	width: 130px;
+}
+
+
+#description {
+	position: absolute;
+	bottom: 0;
+	height: 40%;
+	padding: 20px;
+	background-color: #000000ad;
+
+}
+
+#description h3{
+	margin: 0px 0px;
+	color: white;
+	text-transform: uppercase;
+	font-size: 14pt;
+	font-family: niramit;
+	text-align: center;
+}
