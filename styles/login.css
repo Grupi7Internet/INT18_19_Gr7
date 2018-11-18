@@ -43,3 +43,18 @@ html, body {
  	width: 350px;
 
  }
+ .header_title {
+ 	font-family: 'K2D', sans-serif !important;
+ 	margin-top: 0px;
+}
+
+.error {
+	display: none;
+	color: red;
+	font-size: 12pt;
+	text-align: left;
+}
+
+.Brror {
+	display: block !important;
+}
