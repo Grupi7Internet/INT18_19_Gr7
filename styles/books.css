@@ -19,5 +19,24 @@
 	position: relative;
 }
 
+.scroll {
+	height: 400px;
+	overflow-y: scroll;
+}
 
+.leftContainer{
+	float: left;
+	width: 60%;
+}
 
+.clearfix::after {
+    content: " "; 
+    display: block;
+    clear: both;
+} 
+
+.rightContainer {
+	float: left;
+	text-align: right;
+	width: 40%;
+}
