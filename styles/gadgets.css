@@ -88,13 +88,3 @@ background:linear-gradient(45deg, grey, grey 80%);
             -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.LinksAboutTech p:hover
-{
-font-family: arial;
-font-size: 20px;
-transform: translate(30px);
-font-weight: bold;
-background:linear-gradient(45deg, grey, grey 80%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-opacity
