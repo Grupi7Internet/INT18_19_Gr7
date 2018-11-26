@@ -82,9 +82,3 @@ background:linear-gradient(45deg, grey, grey 80%);
 opacity: 0.9;
 }
 
-.LinksAboutTech a:hover
-{
-background:linear-gradient(45deg, grey, grey 80%);
-            -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
