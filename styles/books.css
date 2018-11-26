@@ -131,3 +131,21 @@
 	font-weight: bold;
 }
 
+.DivList{
+	 width: 49%;
+	 margin-top: 30px;
+	 display:inline-block;
+	 vertical-align: top;
+	 color: white;
+	 font-family: niramit;
+	 font-size: 14pt;
+}
+
+.DivList dd{
+	font-style: italic;
+}
+
+.DivList dt {
+	font-weight: bold;
+}
+
