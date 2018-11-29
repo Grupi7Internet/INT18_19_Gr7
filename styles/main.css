@@ -1,161 +1,87 @@
 
+
 html body {
 	padding: 0px;
 	margin: 0px;
-	background-color:;
 }
+
 
 @font-face
-		{
-			font-family: Modia;
-			src:url(Modia-NonCommercial.otf);
-		}
+	{
+		font-family: niramit;
+		src:url(../fonts/niramit.woff2);
+	}	
 
-@font-face
-		{
-			font-family: Roboto;
-			src:url(Roboto-Black.ttf);
-		}
-
-@font-face
-		{
-			font-family: Lemon;
-			src:url(LemonMilk.otf);
-		}
-
-.time4shcool
-{
-font-family:Modia;
-font-weight: bold;
-font-size: 50px;
-font-weight: bold; 
-position: relative;
--webkit-animation: logoMove 5s infinite;
-  animation: logoMove 1s infinite;
-
+header {
+	width: 100%;
 }
 
-@-webkit-keyframes logoMove {
-  0% {left: 0px;}
-  50% {left: 10px;}
-  100% {left: 0px;}
-}
-
-@keyframes logoMove {
-  0% {left: 0px;}
-  50% {left: 10px;}
-  100% {left: 0px;}	
-}
-
-#search {
-	position: absolute;
-	top:40%;
-	right:60px;
-	display: inline-block;
-}
-#search input[type='search'] {
-	background-color: #dcdcdc;
-	border-radius: 10px;
-	color: white;
-	padding-left: 10px;
-	height: 30px;
-	border:0px;
-	outline: 0px;
-}
-
-#search input[type='search']::placeholder {
+#top.night {
+	background-color: black;
 	color: white;
 }
 
-#search input[type='submit']{
-	background-color: #0070c9;
-	height: 30px;
-	border: 1px lightblue solid;
-	border-radius: 10px;
+#top.night a {
 	color: white;
 }
-nav {
-	text-align: center;
-	background-image: linear-gradient(to right,#686767,black, #686767);
-}
 
-nav ul {
-	list-style: none;
-	margin: 0px;
-}
-
-nav ul li {
-	display: inline-block;
-	font-family:Modia;
-	padding: 10px 10px;
-	
-
-}
-nav ul li a{
-	color: pink;
-}
-/*.RjetetSociale
-{
-
-background-color:  #FFF44F;
-border-radius: 7px;
-position: absolute;
-left:5px;
-top: 5px;
-transition: all .3s ease-in-out;
- 
-}*/
-
-.RjetetSociale img {
-	border: white solid 1px;
-	border-radius: 50px;
-	background-color: #4c555e;
-	padding: 1px;
-}
-.RjetetSociale img:hover{
-	background-color: #0070c9;
-	transition: all 10s ease-in-out 4;
-   transform: scale(1.06);
-
-}
-
-.RjetetSociale
-{
-
-/*background-color:  #FFF44F;*/
-border-radius: 7px;
-display: inline-block; 
-color:rgba(242,242,242,0.7)
-/*transition: all .3s ease-in-out;*/
- 
-}
-.RjetetSociale:hover
-{
-
- 
-}
-.linqetDjathtNalt
-{ 
-font-family: Caviar Dreams;
-color:white;
-float: right;
-color: white;
-/*background-color:#FFF44F;*/
-border-radius: 7px; 
+#top.night img {
+	background-color: transparent;
+	border: 2px solid white;
 }
 
 
+.goToTop{
+	position: fixed;
+	padding: 20px;
+	bottom: 40px;
+	right: 20px;
+	background-color: black;
+	border-radius: 30px;
+}
+
+#logoContainer.night {
+	background-color: #151515;
+}
+
+#logoContainer {
+	padding: 30px;
+	background-color: rgba(228, 226, 226, 0.63);
+	vertical-align: middle;
+	position: relative;
+	border-radius: 0px;
+}
+
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+   padding: 6px !important;
+    margin-left: 0px; 
+}
 
 #slideshow {
-	margin-top: 50px;
+	width: 80%;
+	margin: 50px auto; 
 	border:1px solid gray;
 	padding: 10px;
 	position: relative;
 	border-radius: 10px;
+	overflow-x: hidden;
+}
+
+.slideshow-arrow {
+	border-radius: 50px;
+	background-color: #0000008c;
+	padding: 3px;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top:50%;
 }
 
 .slideshow-title{
-	background-color: #00000063;
+	background-color: #000000b3;
 	padding: 20px;
 	color: white;
 	position: absolute;
@@ -164,7 +90,7 @@ border-radius: 7px;
 	border-radius: 20px;
 	max-width: 50%;
 	display: inline-block;
-	font-family: Roboto;
+	font-family: niramit;
 }
 
 #slideshow-controls{
@@ -177,16 +103,36 @@ border-radius: 7px;
 	height: 15px;
 	width: 15px;
 	display: inline-block;
-	background-color: #0070c9;
-	border: 2px solid pink;
+	background-color: #8bc34a;
+	border: 2px solid white;
 	border-radius: 20px;
 	margin: 3px;
 	cursor: pointer;
 
 }
 
+article.night p{
+	color: white;
+}
+
+article.night h3 {
+	color: #8bc34a;
+}
+
 .slideshow-button-current {
 	background-color: transparent !important;
+}
+
+.time4shcool.night, .time4shcool.night:visited
+{
+font-family:Modia;
+font-weight: bold;
+font-size: 50px;
+color: lightgray;
+position: relative;
+-webkit-animation: logoMove 5s infinite;
+  animation: logoMove 1s infinite;
+
 }
 
 
@@ -200,12 +146,12 @@ border-radius: 7px;
 }
 
 .article1 h3 {
-	font-family: Lemon;
+	font-family: niramit;
 	color: #0070c9;
 }
 
 .article1 p {
-	font-family: Ebrima Regular;
+	font-family: niramit;
 	color: black;
 	font-weight: bold;
 }
@@ -215,6 +161,12 @@ border-radius: 7px;
 	background-color: rgba(235, 235, 235, 0.63);
 }
 
+.article3{
+	width: 21%;
+	float: left;
+	text-align: center;
+	padding: 2%;	
+}
 
 .article2  {
 	width: 21%;
@@ -228,11 +180,14 @@ border-radius: 7px;
 	background-color: rgba(235, 235, 235, 0.63);
 }
 
-.article2 p {
-	font-family: Ebrima Regular;
+
+
+.article3 p, .article2 p {
+	font-family: niramit;
 	color: black;
 	text-align: left;
-	font-weight: bold;
+	width: 210px;
+	margin: 10px auto;
 }
 
 #slideshowPhotos img {
@@ -253,91 +208,3 @@ border-radius: 7px;
 	height: 600px;
 }
 
-body, html {
-	padding: 0px;
-	margin: 0px;
-}
-
-footer {
-	background-color: #f6f6f6;
-	padding: 10px;	
-}
-
-.footer-col {
-	width: 28%;
-	text-align: center;
-	display: inline-block;
-	vertical-align: top;
-	padding: 0% 2.5%;
-}
-
-.footer-col div, .footer-col ul{
-	text-align: left;
-}
- 
-.footer-col ul {
-	list-style-type: none;
-	padding: 0px;
-	margin: 0px;
-}
-
-.footer-col ul li {
-	border-bottom: 1px solid #d2cccc;
-	padding-bottom: 2px;
-	margin: 15px 0px;
-}
-
-.footer-col ul li a {
-	text-decoration: none;	
-	color: #8a8989;
-
-}
-
-
-.footer-col input[type="email"], .footer-col input[type="text"] {
-	border: none;
-	background-color: white;
-	border-radius: 20px;
-	padding: 7px;
-	margin-bottom: 10px;
-}
-
-.footer-col input[type="submit"]{
-	background-color: purple;
-	color: white;
-	border: none;
-	border-radius: 20px;
-	padding: 7px 20px;
-}
-
-.footer-col h3, .footer-col h4 {
-	color: #6e6363;
-	font-family: Modia;
-	font-size: 12pt;
-}
-
-.clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-}
-
-
-.footer-col p {
-	font-size: 10pt;
-	color: #8a8989;
-}
-
-.footer-col a {
-	font-size: 10pt;
-	color: blue;
-}
-
-
-.footer-end p{
-	font-size: 10pt;
-	color: #8a8989;
-}
