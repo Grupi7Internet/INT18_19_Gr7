@@ -1,12 +1,45 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<title>
-		
-	</title>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles/books.css">
+	<link rel="stylesheet" type="text/css" href="styles/header.css">
+    <link rel="stylesheet" type="text/css" href="styles/footer.css">
+	<link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet"> 
+	<script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/books.js"></script>
+	 <style type="text/css">
+        a {
+            color: grey;
+            text-decoration-line: none;
+
+        }
+
+        a:hover {
+            color: #0070c9;
+            transform: scale(1.01);
+            transition: all .3s ease-in-out;
+        }
+
+        a:visited {
+        }
+        
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("dt").add("dd").css("font-family","Helvetica");
+        });
+    </script>
+
+    <script type="text/javascript">
+      function dropdown(){
+        $("#dropdown").slideToggle();
+      }
+  </script>
 </head>
 <body>
-  <header>
+    <header>
     <div id="top">
         <div class="socialNetworks">
             <a target="_blank" href="https://www.linkedin.com/">
@@ -197,6 +230,17 @@
             <p class="right">Website by <abbr title="GRUPI7"><mark>G7</mark></abbr></p>
         </div>
     </footer>
-
+        <script>
+            function formValidator1(){
+                var form = document.getElementById("footerForm");
+                var errorsOl = form.querySelector(".errors");
+                errorsOl.innerHTML="";
+                var name = form.querySelector("input[name='name']");
+                var email = form.querySelector("input[name='email']");
+                
+                var inputs = [name,email];
+                if(AreEmpty(inputs,errorsOl)){ return false;}
+            }
+        </script>
 </body>
 </html>
