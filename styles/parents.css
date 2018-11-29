@@ -40,18 +40,4 @@
  .grid-item video, .grid-item img {
      width: 100%;
 }
-figcaption {
-	color: white;
-     font-family: niramit;
-     font-size: 14pt;
-}
 
- @font-face {
-     font-family: niramit;
-     src:url(../fonts/niramit.woff2);
-}
- section {
-     color: white;
-     font-family: niramit;
-     font-size: 14pt;
-}
