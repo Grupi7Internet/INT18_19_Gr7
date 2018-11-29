@@ -48,7 +48,15 @@ border-radius: 15px;
 box-shadow: 15px 5px gradient(45deg, #09009f, #00ff95 80%); ;
 
 }
+.LinksAboutTech img:hover
+{
+transform: rotateX(45deg);
+width: 300px;
+border: white solid 5px;
+box-shadow: 5px 5px lightgreen;
 
+
+}
 
 .LinksAboutTech a
 {
