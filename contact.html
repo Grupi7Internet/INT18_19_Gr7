@@ -1,11 +1,146 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
+    <style type="text/css">
+        a {
+            color: grey;
+            text-decoration-line: none;
+
+        }
+
+        a:hover {
+            color: #0070c9;
+            transform: scale(1.01);
+            transition: all .3s ease-in-out;
+        }
+
+        #InfoTable table {
+
+            margin: 20px auto;
+            font-family: arial;
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 2px 2px;
+            border: 1px solid #0070c9;
+            resize: both;
+            outline-style: outset;
+            outline-color: invert;
+            outline-offset: 5px;
+
+        }
+
+        .baseCell {
+            background-color: lightyellow;
+        }
+
+        #InfoTable td {
+
+            column-span: 20px;
+            align-items: center;
+        }
+
+        #InfoTable img {
+            text-align: center;
+            width: 100px;
+            height: 100px;
+        }
+
+        #InfoTable tr {
+            text-shadow: 1px 1px;
+            text-align: center;
+            align-items: center;
+            align-self: center;
+        }
+
+        .email {
+            word-wrap: break-word;
+            max-width: 200px;
+        }
+
+        #resizeText {
+            resize: both;
+            overflow: auto;
+        }
+
+        #h2transform {
+            transform: skew(-10deg);
+        }
+
+        #submit_transform:hover {
+            transform: rotateY(20deg);
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles/header.css">
+    <link rel="stylesheet" type="text/css" href="styles/footer.css">
+    <link rel="stylesheet" type="text/css" href="styles/contact.css">
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/formValidator.js"></script>
+    <script src="main.js"></script>
+    <script>
+        function dropdown(){
+        $("#dropdown").slideToggle();
+      }
+    </script>
+    <title>Test</title>
 </head>
+
 <body>
-	<form>
-	<table>
+    <header>
+        <div id="top">
+            <div class="socialNetworks">
+                <a target="_blank" href="https://www.linkedin.com/">
+                    <img width="30" title="Linkedin" alt="linku per linkedin" src="images/linkedin60x60.png"></a>
+                <a target="_blank" href="https://twitter.com/">
+                    <img width="30" title="Twitter" alt="linku per twitter" src="images/twitter60x60.png"></a>
+                <a target="_blank" href="https://plus.google.com/discover">
+                    <img width="30" title="Google PLus" alt="linku per google plus" src="images/googleplus60x60.png"></a>
+                <a target="_blank" href="https://www.pinterest.com/">
+                    <img width="30" title="Pinterest" alt="linku per pinterest" src="images/pinterest60x60.png"></a>
+                <a target="_blank" href="">
+                    <img width="30" alt="linku per newsfeed" title="RSS Feed" src="images/newsfeed60x60.png"></a>
+            </div>
+            <div class="onToplinks">
+                <a target="_blank" href="registration.html"><u>Register</u></a> |
+                <a target="_blank" href="login.html"><u>Student Login</u></a>
+
+            </div>
+        </div>
+        <div id="logoContainer" class="">
+            <a class="time4shcool" href="#">Time 4 School</a>
+            <form id="search" action="#" method="POST">
+                <input type="search" name="search" size="20" placeholder="search our website..">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="books.html">BOOKS</a></li>
+                <li><a href="parents.html">PARENTS</a></li>
+                <li><a href="gadgets.html">GADGETS</a></li>
+                <li><a href="game.html">FUN</a></li>
+                <li onmouseenter="dropdown();" onmouseleave="dropdown();"><a href="#">MORE</a>
+                    <i class="arrow down"></i>
+                    <ul id="dropdown">
+                        <li>
+                            <a href="#">ABOUT US</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">CONTACT US</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div style="width: 1200px; margin: 100px auto;">
+        <h1 id="h2transform">Contact US</h1>
+        <form method="POST" action="contactForm.php" id="ContactForm" onsubmit="return formValidator()">
+            <table>
                 <tbody>
                     <tr>
                         <td>
@@ -27,7 +162,6 @@
                         <td>
                             <ol id="errors">
 
-
                             </ol>
                         </td>
                     </tr>
@@ -36,7 +170,9 @@
                     </tr>
                 </tbody>
             </table>
-            <div id="InfoTable">
+        </form>
+    </div>
+    <div id="InfoTable">
         <table cellpadding="25" cellspacing="5">
             <td class="baseCell">
                 <table border="1" class="tablesUS">
@@ -115,8 +251,39 @@
                 </table>
             </td>
         </table>
-        </form>
-       <footer>
+    </div>
+    <button style="position: fixed;right: 20px;bottom: 20px;" onclick="Location();">Where am I?</button>
+    <script type="text/javascript">
+        function Location() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(Position);
+            }
+        }
+
+        function Position(position) {
+            var latlon = position.coords.latitude + "," + position.coords.longitude;
+            alert("Your coordinates are: " + latlon);
+        }
+
+
+
+        function formValidator() {
+            var form = document.getElementById("ContactForm");
+            var errorsOl = document.getElementById("errors");
+            errorsOl.innerHTML = "";
+            var name = form.querySelector("input[name='name']");
+            var email = form.querySelector("input[name='email']");
+            var phone = form.querySelector("input[name='phone']");
+            var message = form.querySelector("textarea[name='message']");
+
+            var inputs = [name, email, phone, message];
+            var v = validePhoneNumber(phone, errorsOl);
+            if (AreEmpty(inputs, errorsOl) || !v) {
+                return false;
+            }
+        }
+    </script>
+    <footer>
         <div class="footer-col">
             <div>
                 <h3>ABOUT OUR SCHOOL</h3>
@@ -170,9 +337,16 @@
     </footer>
         <script>
             function formValidator1(){
-                 //some validation;}
+                var form = document.getElementById("footerForm");
+                var errorsOl = form.querySelector(".errors");
+                errorsOl.innerHTML="";
+                var name = form.querySelector("input[name='name']");
+                var email = form.querySelector("input[name='email']");
+                
+                var inputs = [name,email];
+                if(AreEmpty(inputs,errorsOl)){ return false;}
             }
         </script>
-
 </body>
+
 </html>
