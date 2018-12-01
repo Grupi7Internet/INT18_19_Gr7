@@ -68,6 +68,15 @@ window.onload = function(){
     });
 
 
+  if(localStorage.getItem("LastTime")!= null){
+      document.getElementById("LastVisited").innerHTML = "Last Visit: " + localStorage.getItem("LastTime");
+  }
+
+  startWorker();
+
+
+}
+
 function OpTopPressed(){
   $('html, body').animate({
         scrollTop: $("#top").offset().top
@@ -76,6 +85,7 @@ function OpTopPressed(){
       });
 }
 
+
 window.onbeforeunload = function(){
    stopWorker();
    var date = (new Date()).toString().substr(0, 15);
@@ -83,19 +93,3 @@ window.onbeforeunload = function(){
 }
 
 
-
-function stopWorker() {
-  w.terminate();
-  w = undefined;
-}
-
-function startWorker() {
-    if (typeof(Worker) !== "undefined") {
-      if (typeof(w) == "undefined") {
-        w = new Worker("scripts/workers.js");
-      }
-      w.onmessage = function(event) {
-        document.getElementById("TimeOnPage").innerHTML = event.data;
-      };
-  }
-}
