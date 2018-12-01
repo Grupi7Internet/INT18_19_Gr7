@@ -50,3 +50,52 @@ window.onload = function(){
         a = false;
     });
 
+
+    $(".slideshow-button").on("click", function() {
+        if (!$(this).hasClass("slideshow-button-current")) {
+            var index = $(".slideshow-button").index($(this));
+            current = index;
+            $("[data='current']").hide("slide", {
+                    direction: "left"
+                }, 1000)
+                .attr("data", "");
+            $(imgs[index]).show("slide", {
+                direction: "right"
+            }, 1000).attr("data", "current");
+            $(".slideshow-button-current").attr("class", "slideshow-button");
+            $(this).attr("class", "slideshow-button slideshow-button-current");
+        }
+    });
+
+
+function OpTopPressed(){
+  $('html, body').animate({
+        scrollTop: $("#top").offset().top
+      }, 800, function(){
+        window.location.hash = "#top";
+      });
+}
+
+window.onbeforeunload = function(){
+   stopWorker();
+   var date = (new Date()).toString().substr(0, 15);
+   localStorage.setItem("LastTime",date);
+}
+
+
+
+function stopWorker() {
+  w.terminate();
+  w = undefined;
+}
+
+function startWorker() {
+    if (typeof(Worker) !== "undefined") {
+      if (typeof(w) == "undefined") {
+        w = new Worker("scripts/workers.js");
+      }
+      w.onmessage = function(event) {
+        document.getElementById("TimeOnPage").innerHTML = event.data;
+      };
+  }
+}
