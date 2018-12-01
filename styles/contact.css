@@ -1,0 +1,27 @@
+#ContactForm input, #ContactForm textarea{
+	background-color: #f2f2f2;
+	width: 100%;
+	font-size: 12pt;
+	padding: 10px 7px 10px 8px;
+	box-sizing:border-box;
+	border: none;
+	margin-bottom: 10px; 
+}
+
+#ContactForm table{
+	width: 50%;
+}
+
+#ContactForm input[type="submit"] {
+	background-color: black;
+	color: white;
+	width: inherit;
+	padding: 10px;
+}
+
+.inputError {
+	border: 1px solid red !important;
+}
+
+.inputError::placeholder {
+}
