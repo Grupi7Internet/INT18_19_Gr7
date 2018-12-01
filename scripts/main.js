@@ -18,3 +18,35 @@ $(window).scroll(function() {
         $('#part2').fadeTo(1000, 1);
     }
 });
+
+
+var w;
+
+window.onload = function(){
+  colorChanger = document.getElementById("colorChanger");
+  var hour = new Date().getHours();
+  if(hour >18 || hour < 6){
+
+    night = false;
+    changeColors(); 
+    
+  }
+
+
+    SlideShowImg(array);
+    imgs = $('.img');
+    controls = $('.slideshow-button');
+    len = imgs.length;
+    setInterval(function() {
+        if (a == false) { //vetem nese kursori nuk eshte mbi foto
+            SlideImage(1);
+        }
+    }, 5000);
+
+
+    $("#slideshow").mouseenter(function() {
+        a = true;
+    }).mouseleave(function() {
+        a = false;
+    });
+
