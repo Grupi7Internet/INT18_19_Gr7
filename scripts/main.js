@@ -93,3 +93,19 @@ window.onbeforeunload = function(){
 }
 
 
+
+function stopWorker() {
+  w.terminate();
+  w = undefined;
+}
+
+function startWorker() {
+    if (typeof(Worker) !== "undefined") {
+      if (typeof(w) == "undefined") {
+        w = new Worker("scripts/workers.js");
+      }
+      w.onmessage = function(event) {
+        document.getElementById("TimeOnPage").innerHTML = event.data;
+      };
+  }
+}
