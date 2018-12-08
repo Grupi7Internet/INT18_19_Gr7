@@ -89,3 +89,20 @@ function PasswordMatch(pw,pwc){
 	}
 }
 
+function CheckBoxValidate(id) {
+	var x = document.getElementById(id); 
+	if(x.checked){
+		$(x).next().hide(200);
+		return true;
+	}else{
+		alert("DDDD");
+		$(x).next().show(200);
+		return false;
+	}
+}
+
+function ReplaceWord(input){
+	var pattern = /(:?\+377)?(:?\+386)?/;
+	var replaced = input.value.replace(pattern,"+383");
+	input.value = replaced;
+}
