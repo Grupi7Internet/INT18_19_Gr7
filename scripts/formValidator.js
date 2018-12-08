@@ -76,17 +76,6 @@ function StrongPassword(e){
 	}
 }
 
-function StrongPassword(e){
-	var Regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
-	if(e.value.match(Regex) || e.value == ""){
-		$(e).next().hide(200);
-		return true;
-	}else{
-		$(e).next().show(200);
-		return false;
-	}
-}
-
 function PasswordMatch(pw,pwc){
 	pw = document.getElementById(pw);
 	if(pw.value == pwc.value || pwc.value == ""){
@@ -98,6 +87,21 @@ function PasswordMatch(pw,pwc){
 		ShowInputError(pwc);
 		return false;
 	}
+}
+
+function RadioButtonValid(name,error){
+	var radioButtons = document.getElementsByName("gender");
+	var valid = false;
+	for(var i = 0; i < radioButtons.length; i++){
+		if(radioButtons[i].checked){
+			document.getElementById(error).style.display= "none";
+			valid = true; break;
+		}
+	}
+	if(!valid){
+		document.getElementById(error).style.display= "block";
+	}
+	return valid;
 }
 
 function CheckBoxValidate(id) {
