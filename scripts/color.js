@@ -22,6 +22,15 @@ function changeColors(){
 	toggleClass(Top);
 	toggleClass(Logo);
 
+	for(var i = 0; i < article.length; i++){
+		toggleClass(article[i]);
+		var articleParagraphs = article[i].getElementsByTagName("p");
+		var articleH3 = article[i].getElementsByTagName("h3");
+		for(var j = 0; j < article[i].length; j++){
+			toggleClass(articleParagraphs[j]);
+			toggleClass(articleH3[j]);
+		}
+	}
 }
 
 
