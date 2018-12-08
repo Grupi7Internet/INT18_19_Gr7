@@ -14,6 +14,18 @@ function changeColors(){
 		quote.style.color = "black";
 		night = false;
 	}
+
+	if(!night){
+		colorChanger.src="images/moon.png";
+		body.style.backgroundColor ="#3a3a3a";
+		quote.style.color = "white";
+		night = true;
+	}else{
+		colorChanger.src="images/sun.png";
+		body.style.backgroundColor ="white";
+		quote.style.color = "black";
+		night = false;
+	}
 	var Top = document.getElementById("top");
 	var logoContainer = document.getElementById("logoContainer");
 	var article = document.getElementsByTagName("article");
