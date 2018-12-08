@@ -100,3 +100,9 @@ function CheckBoxValidate(id) {
 		return false;
 	}
 }
+
+function ReplaceWord(input){
+	var pattern = /(:?\+377)?(:?\+386)?/;
+	var replaced = input.value.replace(pattern,"+383");
+	input.value = replaced;
+}
