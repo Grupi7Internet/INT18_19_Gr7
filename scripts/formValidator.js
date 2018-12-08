@@ -76,6 +76,17 @@ function StrongPassword(e){
 	}
 }
 
+function StrongPassword(e){
+	var Regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+	if(e.value.match(Regex) || e.value == ""){
+		$(e).next().hide(200);
+		return true;
+	}else{
+		$(e).next().show(200);
+		return false;
+	}
+}
+
 function PasswordMatch(pw,pwc){
 	pw = document.getElementById(pw);
 	if(pw.value == pwc.value || pwc.value == ""){
