@@ -27,7 +27,6 @@ var array = [
 
 
  var a  = false;    
- var a  = fe; 
 var current= 0;
 var len;
 var imgs;
