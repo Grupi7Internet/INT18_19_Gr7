@@ -65,19 +65,6 @@ function SlideImage(x){
         to = "left";
     }
 
-    function SlideImage(x){
-    var to;
-    var from;
-
-    if(x == -1){
-        from = "left";
-        to = "right";
-    }else {
-        from = "right";
-        to = "left";
-    }
-
-
 
     $(imgs[current % len]).hide("slide",{direction: to},1000)
     .attr("data","");
@@ -86,6 +73,12 @@ function SlideImage(x){
      if(current == -1) 
        current=len-1;
 
+$(imgs[current % len]).hide("slide",{direction: to},1000)
+    .attr("data","");
+     $(controls[current % len]).attr("class","slideshow-button");
+     current+=x;
+     if(current == -1) 
+       current=len-1;
      $(imgs[current % len]).show("slide",{direction: from},1000).attr("data","current");
      $(controls[current % len]).attr("class","slideshow-button slideshow-button-current");
      $(".slideshow-title").text(array[current%len].caption);
