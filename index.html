@@ -1,65 +1,113 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
-    <title></title>
+    <style type="text/css">
+        a {
+            text-decoration-line: none;
+
+        }
+
+        a:hover {
+            color: #0070c9;
+            transform: scale(1.01);
+            transition: all .3s ease-in-out;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles/header.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="scripts/formValidator.js"></script>
+    <script src="scripts/color.js"></script>
+    <script src="scripts/slideshow.js"></script>
+    <script src="scripts/main.js"></script>
+
+   <script type="text/javascript">
+      function dropdown(){
+        $("#dropdown").slideToggle();
+      }
+  </script>
+
+    <title>Test</title>
 </head>
 
 <body>
-
     <header>
-        <div id="top" class="">
-            <div class="socialNetworks">
-                <a target="_blank" href="https://www.linkedin.com/">
-                    <img width="30" title="Linkedin" alt="linku per linkedin" src="images/linkedin60x60.png"></a>
-                <a target="_blank" href="https://twitter.com/">
-                    <img width="30" title="Twitter" alt="linku per twitter" src="images/twitter60x60.png"></a>
-                <a target="_blank" href="https://plus.google.com/discover">
-                    <img width="30" title="Google PLus" alt="linku per google plus" src="images/googleplus60x60.png"></a>
-                <a target="_blank" href="https://www.pinterest.com/">
-                    <img width="30" title="Pinterest" alt="linku per pinterest" src="images/pinterest60x60.png"></a>
-                <a target="_blank" href="">
-                    <img width="30" alt="linku per newsfeed" title="RSS Feed" src="images/newsfeed60x60.png"></a>
-            </div>
-            <div class="onToplinks">
-                <a target="_blank" href="registration.html"><u>Register</u></a> |
-                <a target="_blank" href="login.html"><u>Student Login</u></a>
-                <p id="LastVisited" style="text-align: right;color: #929292;margin-top: 7px; font-size: 10pt;"></p>
-
-            </div>
+    <div id="top" class="">
+        <div class="socialNetworks">
+            <a target="_blank" href="https://www.linkedin.com/">
+                <img width="30" title="Linkedin" alt="linku per linkedin" src="images/linkedin60x60.png"></a>
+            <a target="_blank" href="https://twitter.com/">
+                <img width="30" title="Twitter" alt="linku per twitter" src="images/twitter60x60.png"></a>
+            <a target="_blank" href="https://plus.google.com/discover">
+                <img width="30" title="Google PLus" alt="linku per google plus" src="images/googleplus60x60.png"></a>
+            <a target="_blank" href="https://www.pinterest.com/">
+                <img width="30" title="Pinterest" alt="linku per pinterest" src="images/pinterest60x60.png"></a>
+            <a target="_blank" href="">
+                <img width="30" alt="linku per newsfeed" title="RSS Feed" src="images/newsfeed60x60.png"></a>
         </div>
-        <div id="logoContainer" class="">
-            <a class="time4shcool" href="#">Time 4 School</a>
-            <form id="search" action="#" method="POST">
-                <input type="search" name="search" size="20" placeholder="search our website..">
-                <input type="submit" value="Search">
-            </form>
+        <div class="onToplinks">
+            <a target="_blank" href="registration.html"><u>Register</u></a> |
+            <a target="_blank" href="login.html"><u>Student Login</u></a>
+            <p id="LastVisited" style="text-align: right;color: #929292;margin-top: 7px; font-size: 10pt;"></p>
+
+        </div>
+    </div>
+    <div id="logoContainer" class="">
+        <a class="time4shcool" href="#">Time 4 School</a>
+        <form id="search" action="#" method="POST">
+           <input type="search" name="search" size="20" placeholder="search our website..">
+           <input type="submit" value="Search">
+        </form>
+    </div>
+    
+    <nav>
+        <ul>
+             <li><a href="#">HOME</a></li>
+             <li><a href="books.html">BOOKS</a></li>
+             <li><a href ="parents.html">PARENTS</a></li>
+             <li><a href ="gadgets.html">GADGETS</a></li>
+             <li><a href ="game.html">FUN</a></li>
+             <li onmouseenter="dropdown();" onmouseleave="dropdown();"><a href="#">MORE</a>
+                <i class="arrow down"></i>
+                <ul id="dropdown">
+                    <li>
+                        <a href="#">ABOUT US</a>       
+                    </li>
+                    <li>
+                        <a href="contact.html">CONTACT US</a>       
+                    </li>
+                </ul>
+             </li>
+        </ul>
+      </nav>
+      </header>
+  <div style="width: 1200px; margin: 0 auto;">
+    <div id='slideshow'>
+        <div id="slideshowPhotos">
+        </div>
+        <div class="slideshow-title">Keep Trying! Trying new things early on in life will help you determine the path you take in the future.
+        </div>
+        <div id="slideshow-controls">
+        
+        </div>
+        <div style="left: 20px;transform: rotateY(180deg);" class="slideshow-arrow" onclick="SlideImage(1)">
+            <img src="images/arrow.png" width="100%">
         </div>
 
-        <nav>
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="books.html">BOOKS</a></li>
-                <li><a href="parents.html">PARENTS</a></li>
-                <li><a href="gadgets.html">GADGETS</a></li>
-                <li><a href="game.html">FUN</a></li>
-                <li onmouseenter="dropdown();" onmouseleave="dropdown();"><a href="#">MORE</a>
-                    <i class="arrow down"></i>
-                    <ul id="dropdown">
-                        <li>
-                            <a href="#">ABOUT US</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">CONTACT US</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+         <div style="right: 20px;" class="slideshow-arrow" onclick="SlideImage(-1)">
+            <img src="images/arrow.png" width="100%">
+        </div>
+    </div>    
+
+    <script type="text/javascript">
+        
+    </script>
 
     <div style="margin-top: 70px;opacity: 0;" class="clearfix" id="part1">
-        <article class="article1">
+        <article  class="article1">
             <img width="64" alt="foto" title="Foto" height="64" src="images/HealthyHabits.png">
             <h3>Healthy Habits</h3>
             <p>Make a plan,then make healthy habits then healthy habits make you.</p>
@@ -81,29 +129,44 @@
 
         </article>
     </div>
-    <div id="quote" style="font-size: 20px; text-align: center; margin:40px 0px;font-family: Roboto;"><b>"Study hard what interests you the most in the most undisciplined irreverent and orginal manner possible."</b></div>
-    <div class="clearfix" style="margin-top: 70px;opacity: 0;" id="part2">
+    
+
+<div id="quote" style="font-size: 20px; text-align: center; margin:40px 0px;font-family: Roboto;"><b>"Study hard what interests you the most in the most undisciplined irreverent and orginal manner possible."</b></div>
+
+     <div class="clearfix" style="margin-top: 70px;opacity: 0;" id="part2">
         <article class="article3">
             <h3>Success </h3>
             <p>usually comes to those who are too busy to be looking for it.</p>
         </article>
-        <article class="article2">
-            <img width="210" height="160" alt="foto" title="Foto" src="images/Resourses.png">
+         <article class="article2">
+            <img width="210" height="160" alt="foto" title="Foto"  src="images/Resourses.png">
             <p>A proper study plan and dedication always beats any challenge.</p>
         </article>
         <article class="article2">
-            <img width="210" height="160" alt="foto" title="Foto" src="images/sun.gif">
+            <img width="210" height="160" alt="foto" title="Foto"  src="images/sun.gif">
             <p>Keep your face to the sunshine and you cannot see a shadow. </p>
         </article>
         <article class="article2">
-            <img width="210" height="160" alt="foto" title="Foto" src="images/teacher.png">
+            <img width="210" height="160" alt="foto" title="Foto"  src="images/teacher.png">
             <p>Discipline is the bridge between goals and accomplishment.</p>
         </article>
 
     </div>
 
+    </div>
+  </div>
 
-    <footer>
+  <div class="goToTop">
+    <a onclick="OpTopPressed();" href="#top">
+      <i class="arrow up"></i>
+     </a> 
+  </div>
+
+<div style="position: fixed;left: 20px;bottom: 40px;width: 40px;height: 40px;background-color: black; padding: 10px;border-radius: 50px;" onclick="changeColors();">
+    <img id="colorChanger" src="/images/sun.png" width="100%" height="100%" alt="">
+</div>
+
+<footer>
         <div class="footer-col">
             <div>
                 <h3>ABOUT OUR SCHOOL</h3>
@@ -121,34 +184,52 @@
         <div class="footer-col">
             <h3 style="text-align: left;">LINKS</h3>
             <ul>
-                <li> » <a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
-                <li> » <a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a></li>
-                <li> » <a href="https://www.edx.org/" target="_blank">Edx</a></li>
-                <li> » <a href="https://www.codingame.com/start" target="_blank">Coding Game</a></li>
-                <li> » <a href="https://code.org/learn" target="_blank">Code</a></li>
-                <li> » <a href="https://www.tynker.com/" target="_blank">Tinker</a></li>
-                <li> » <a href="https://www.e-learningforkids.org#page" target="_blank">e-learningforkids</a></li>
-
+                <li> »  <a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
+                <li> »  <a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a></li>
+                <li> »  <a href="https://www.edx.org/" target="_blank">Edx</a></li>
+                <li> »  <a href="https://www.codingame.com/start" target="_blank">Coding Game</a></li>
+                <li> »  <a href="https://code.org/learn" target="_blank">Code</a></li>
+                <li> »  <a href="https://www.tynker.com/" target="_blank">Tinker</a></li>
+                <li> »  <a href="https://www.e-learningforkids.org#page" target="_blank">e-learningforkids</a></li>
+               
             </ul>
         </div>
         <div class="footer-col">
-            <h3 style="text-align: left;">LINKS</h3>
-            <ul>
-                <li> » <a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
-                <li> » <a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a></li>
-                <li> » <a href="https://www.edx.org/" target="_blank">Edx</a></li>
-                <li> » <a href="https://www.codingame.com/start" target="_blank">Coding Game</a></li>
-                <li> » <a href="https://code.org/learn" target="_blank">Code</a></li>
-                <li> » <a href="https://www.tynker.com/" target="_blank">Tinker</a></li>
-                <li> » <a href="https://www.e-learningforkids.org#page" target="_blank">e-learningforkids</a></li>
-
-            </ul>
+            <div>
+                <h3>NEWSLETTER</h3>
+                <p>Join us and recieve productive newsletters.</p>
+                <form action="#" method="POST" id="footerForm" onsubmit="return formValidator1()">
+                    <input type="text" name="name" placeholder="Name" /> <br />
+                    <input type="email" name="name" placeholder="Email" /> <br />
+                    <ol class="errors">
+                        
+                    </ol>
+                    <input type="submit" value="SUBMIT" />
+                </form>
+            </div>
+            <address>
+                <h3 style="text-decoration: underline overline; ">CONTACT US</h3>
+                <p>Tel: xxxxx xxxxxxxxxx</p>
+                <p><a href="mailto:me@example.com">Email: contact@mydomain.com</a></p>
+            </address>
         </div>
-        <div class="footer-col">
-           
-
+        <div class="footer-end clearfix">
+            <p class="left">Copyright &copy; 2019 - All Rights Reserved</p>
+            <p class="right">Time on Page <span id="TimeOnPage" style="color: white;"></span> Website by <abbr title="GRUPI7"><mark>G7</mark></abbr></p>
+        </div>
     </footer>
-
+        <script>
+            function formValidator1(){
+                var form = document.getElementById("footerForm");
+                var errorsOl = form.querySelector(".errors");
+                errorsOl.innerHTML="";
+                var name = form.querySelector("input[name='name']");
+                var email = form.querySelector("input[name='email']");
+                
+                var inputs = [name,email];
+                if(AreEmpty(inputs,errorsOl)){ return false;}
+            }
+        </script>
 </body>
 
 </html>
