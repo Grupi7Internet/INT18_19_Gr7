@@ -1,0 +1,2 @@
+var seconds = 0;
+
