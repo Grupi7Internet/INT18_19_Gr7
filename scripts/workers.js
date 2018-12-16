@@ -9,4 +9,3 @@ function CalculateTime(){
 	setTimeout("CalculateTime()",1000); 
 }
 
-CalculateTime();
