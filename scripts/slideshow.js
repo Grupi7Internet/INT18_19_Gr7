@@ -25,6 +25,30 @@ var array = [
    }
 ];
 
+var a  = false;    
+var current= 0;
+var len;
+var imgs;
+var controls;
+
+function SlideShowImg(array){
+    for(var i = 0 ;i < array.length; i++){
+        var img = document.createElement("img");
+        var span = document.createElement("span");
+        if(i == 0){
+            span.setAttribute("class","slideshow-button slideshow-button-current");
+        }else{
+            span.setAttribute("class","slideshow-button");
+        }
+        img.src = array[i].src;
+        img.setAttribute('class','img');
+        var slideshowPhotos = document.getElementById("slideshowPhotos");
+        var slideshowControls = document.getElementById("slideshow-controls");
+        slideshowPhotos.appendChild(img);
+        slideshowControls.appendChild(span);
+    }
+}   
+
 
  var a  = false;    
 var current= 0;
