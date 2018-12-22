@@ -20,7 +20,32 @@
                                     text-align: left;
                                     margin:0 auto;
                     }
-	</style>
+
+	 .grid-container figcaption {
+                                    text-align: center;
+                                    font-style: italic;
+                                    font-size: 12;
+                                }
+
+
+                        
+                </style>
+
+                <script type="text/javascript">
+
+                function changeFill() 
+                {
+                    var elms = document.getElementsByClassName('svg')
+                    for (var i = 0; i < elms.length; i++) 
+                        {
+                        elms[i].style.fill = "rgba(" + Math.floor(255 * Math.random()) + ", " + Math.floor(255 * Math.random()) + ", " + Math.floor(255 * Math.random()) +Math.random()+ ")";
+                        }
+                                     
+                }
+                
+
+                 </script>
+
 </head>
 <body>
      <div class= "grid-container" >
@@ -35,7 +60,14 @@
              </div>
 
              <div class="grid-item" style="grid-row-start:2; grid-row-end:7 ">
-               
+               <svg width="150" height="2300">
+                    <polyline class="svg" points="50 90,0 100,0 190,50 210,100 190,100 100,50 90" onclick="changeFill()"/>
+                    <circle class="svg" cx="50" cy="150" r="30" stroke="linen" stroke-width="4" fill="grey" onclick="changeFill()"/>
+                    
+                    <circle class="svg" cx="50" cy="600" r="30" stroke="linen" stroke-width="4" fill="grey" onclick="changeFill()"/>
+                    <circle class="svg" cx="50" cy="1300" r="30" stroke="linen" stroke-width="4" fill="grey" onclick="changeFill()" />
+                    <circle class="svg" cx="50" cy="2150" r="30" stroke="linen" stroke-width="4" fill="grey"onclick="changeFill()" />
+                </svg> 
 
                
              </div>
