@@ -1,25 +1,57 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-    <style>
-    footer{
-        margin:0 auto;
-    }
-    footer p{
-            font-family: arial;
-            
-            font-weight: bold;
-            background:linear-gradient(45deg, #09009f, #00ff95 80%);
+	<link rel="stylesheet" type="text/css" href="styles/gadgets.css">
+    <link rel="stylesheet" type="text/css" href="styles/header.css">
+	 <link rel="stylesheet" type="text/css" href="styles/footer.css">
+    <script src="scripts/jquery.min.js"></script>
+	<title>Gadgets</title>
+	<style>
+	footer{
+		margin:0 auto;
+	}
+	footer p{
+			font-family: arial;
+			
+			font-weight: bold;
+			background:linear-gradient(45deg, #09009f, #00ff95 80%);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: 0.3s;
-            }
-        
-    </style>
+  			-webkit-text-fill-color: transparent;
+   			transition: 0.3s;
+			}
+		
+	</style>
+	<script >
+		var a=false;
+        var teksti; 
+		$(document).ready(function(){
+  		$("#h2set").on("click",function(){
+  		
+	  		if(a)
+	  		{
+                teksti=$("#h2set").text();
+		    	$("#h2set").text("Getting new gadgets is part of the right way back to School.");
+		    	a=false;
+	    	}
+	    	else 
+	    	{
+		    	$("#h2set").text(teksti);
+		    	a=true;
+	    	}
+    	});
+        });
+
+	</script>
+	
+    <script type="text/javascript">
+      function dropdown(){
+        $("#dropdown").slideToggle();
+      }
+  </script>
 </head>
-<body>
-<div id="top">
+<body style="color: rgba(0,0,0,.65)" >
+<header>
+    <div id="top">
         <div class="socialNetworks">
             <a target="_blank" href="https://www.linkedin.com/">
                 <img width="30" title="Linkedin" alt="linku per linkedin" src="images/linkedin60x60.png"></a>
@@ -67,15 +99,22 @@
         </ul>
       </nav>
       </header>
-<h2 id="h2set">The best part of going back to school is getting new gadgets.</h2>
-              <div class="LinksAboutTech">
-             
+        <div class="LinksAboutTech">
+            	<h2 id="h2set">The best part of going back to school is getting new gadgets.</h2>
+            	<div class="PhotosAboutGadgets">
+        
+            	<img src="images\present.jpg" alt="schoolsupplies2">
+                   <a href="https://familylivingtoday.com/best-gifts-for-kids/" target="_blank">
+                    <p>What we like.</p> 
+                    </a>            	
+                </div><div class="PhotosAboutGadgets">
+            	<img src="images\phoneandothers.jpg.png" alt="phoneandothers" >
 
-                        
+                		
                 <a target="_blank"  href="https://www.youtube.com/watch?v=P4ub-xwhx4k&list=PLdlqH-byLbwQCKuEgJLQGxB_QIG7vwoHn">
                 <p>Ready to go.</p>
                 </a>
-                </div><div class="PhotosAboutGadgets">
+            	</div><div class="PhotosAboutGadgets">
 
                 <img  src="images\books.png" alt="books">
                         <a href="https://bookboon.com/" target="_blank"><p>The best human friend.</p></a>
@@ -98,47 +137,9 @@
                 </a>
                          
                 </div>
-
-                  </div><div class="PhotosAboutGadgets">
-                <img  class="PhotosAboutGadgets" src="images\Audible.png" alt="lazystudent">
-                <a target="_blank" href="https://www.audible.com/">
-                <p>For the lazy students.</p>
-                </a>
-                         
-                </div>
-
-
-
-                </div><div class="PhotosAboutGadgets">
-                <img  class="PhotosAboutGadgets" src="images\verge.png" >
-                <a target="_blank" href="https://www.theverge.com/">    
-                <p>Stay tuned about tech.</p>
-                </a>
-                </div><div class="PhotosAboutGadgets">
-                <img  class="PhotosAboutGadgets" src="images\welearntogether.png">
-                <a target="_blank" href="https://www.parents.com/fun/arts-crafts/kid/?fbclid=IwAR15trKzC0PtGlBvmpR-fb8WhfBu5-xVoqGzWr_orO-1Rmx5bP1DigW0quY">
-                <p>We learn together.</p>
-                </a>
-                         
-                </div><div class="PhotosAboutGadgets">
-                <img  class="PhotosAboutGadgets" src="images\Audible.png" alt="lazystudent">
-                <a target="_blank" href="https://www.audible.com/">
-                <p>For the lazy students.</p>
-                </a>
-                      
-
-
-               
-                         
-                </div><div class="PhotosAboutGadgets">
-                <img  class="PhotosAboutGadgets" src="images\Audible.png" alt="lazystudent">
-                <a target="_blank" href="https://www.audible.com/">
-                <p>For the lazy students.</p>
-                </a>
-                         
-                </div>
             </div>
-              <footer>
+
+    <footer>
         <div class="footer-col">
             <div>
                 <h3>ABOUT OUR SCHOOL</h3>
@@ -190,6 +191,17 @@
             <p class="right">Website by <abbr title="GRUPI7"><mark>G7</mark></abbr></p>
         </div>
     </footer>
-
+        <script>
+            function formValidator1(){
+                var form = document.getElementById("footerForm");
+                var errorsOl = form.querySelector(".errors");
+                errorsOl.innerHTML="";
+                var name = form.querySelector("input[name='name']");
+                var email = form.querySelector("input[name='email']");
+                
+                var inputs = [name,email];
+                if(AreEmpty(inputs,errorsOl)){ return false;}
+            }
+        </script>
 </body>
 </html>

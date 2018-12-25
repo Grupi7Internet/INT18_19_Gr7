@@ -1,20 +1,11 @@
+var night = false;
+var colorChanger;
+
 
 function changeColors(){
 	var body = document.getElementsByTagName("body")[0];
 	var quote = document.getElementById("quote");
 	//alert(night);
-	if(!night){
-		colorChanger.src="images/moon.png";
-		body.style.backgroundColor ="#3a3a3a";
-		quote.style.color = "white";
-		night = true;
-	}else{
-		colorChanger.src="images/sun.png";
-		body.style.backgroundColor ="white";
-		quote.style.color = "black";
-		night = false;
-	}
-
 	if(!night){
 		colorChanger.src="images/moon.png";
 		body.style.backgroundColor ="#3a3a3a";

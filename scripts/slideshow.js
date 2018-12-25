@@ -26,7 +26,6 @@ var array = [
 ];
 
 
-
  var a  = false;    
 var current= 0;
 var len;
