@@ -50,6 +50,7 @@ function SlideShowImg(array){
     }
 }   
 
+
 function SlideImage(x){
     var to;
     var from;
