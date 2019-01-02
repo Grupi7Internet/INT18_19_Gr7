@@ -1,0 +1,142 @@
+﻿ body {
+ 	background: linear-gradient(to left, #2193b0, #6dd5ed);
+ 	font-family: niramit;
+ }
+
+.mainContainer {
+	margin-top: 40px;
+}
+
+.mainContainer h2 {
+	font-size: 29pt;
+	font-family: niramit, serif;
+}
+
+#divImg {
+	background-color: black;
+	width: 500px;
+	height: 400px;
+	position: relative;
+}
+
+#video {
+	width: 100%;
+	height: 100%;
+}
+
+.scroll {
+	height: 400px;
+	overflow-y: scroll;
+}
+
+.leftContainer{
+	float: left;
+	width: 60%;
+}
+
+.clearfix::after {
+    content: " "; 
+    display: block;
+    clear: both;
+} 
+
+.rightContainer {
+	float: left;
+	text-align: right;
+	width: 40%;
+}
+.rightContainer li {
+	
+	padding: 20px;
+
+}
+
+
+.grid {
+	margin-top: 0px;
+	display: inline-block;
+}
+.grid ul {
+	padding: 0px;
+	margin: 0px;
+}
+.grid ul li{
+	display: inline-block;
+	padding: 5px;
+}
+
+.grid-item1 {
+	width: 130px;
+	background-color: white;
+	padding: 2px;
+	vertical-align: middle;
+}
+
+.gid-item1 img {
+	width: 130px;
+	vertical-align: middle;
+}
+
+
+#description {
+	position: absolute;
+	bottom: 0;
+	height: 40%;
+	padding: 20px;
+	background-color: #000000ad;
+
+}
+
+#description h3{
+	margin: 0px 0px;
+	color: white;
+	text-transform: uppercase;
+	font-size: 14pt;
+	font-family: niramit;
+	text-align: center;
+}
+#description-text {
+ 	color: white;
+ 	width: 70%;
+ 	font-family: niramit;
+ 	float: left;
+ }
+
+
+ #playDiv {
+ 	padding: 40px;
+ 	border: 2px dashed white;
+ 	border-radius: 50px;
+ 	text-align: center;
+ 	position: absolute;
+ 	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	background-color: black;
+ }
+
+ #FullDiv {
+ 	display: none;
+ 	background-color: #000000d9;
+ 	position: fixed;
+ 	top: 0; right: 0; bottom: 0; left: 0;
+ }
+
+.DivList{
+	 width: 49%;
+	 margin-top: 30px;
+	 display:inline-block;
+	 vertical-align: top;
+	 color: white;
+	 font-family: niramit;
+	 font-size: 14pt;
+}
+
+.DivList dd{
+	font-style: italic;
+}
+
+.DivList dt {
+	font-weight: bold;
+}
+

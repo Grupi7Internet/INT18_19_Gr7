@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles/video.css">
+	<link rel="stylesheet" type="text/css" href="styles/header.css">
+    <link rel="stylesheet" type="text/css" href="styles/footer.css">
+	<link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet"> 
+	<script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/video.js"></script>
+	 <style type="text/css">
+        a {
+            color: grey;
+            text-decoration-line: none;
+
+        }
+
+        a:hover {
+            color: #0070c9;
+            transform: scale(1.01);
+            transition: all .3s ease-in-out;
+        }
+
+        a:visited {
+        }
+        
+    </style>
+
+    <script type="text/javascript">
+      function dropdown(){
+        $("#dropdown").slideToggle();
+      }
+  </script>
+</head>
+<body>
+    <header>
+    <div id="top">
+        <div class="socialNetworks">
+            <a target="_blank" href="https://www.linkedin.com/">
+                <img width="30" title="Linkedin" alt="linku per linkedin" src="images/linkedin60x60.png"></a>
+            <a target="_blank" href="https://twitter.com/">
+                <img width="30" title="Twitter" alt="linku per twitter" src="images/twitter60x60.png"></a>
+            <a target="_blank" href="https://plus.google.com/discover">
+                <img width="30" title="Google PLus" alt="linku per google plus" src="images/googleplus60x60.png"></a>
+            <a target="_blank" href="https://www.pinterest.com/">
+                <img width="30" title="Pinterest" alt="linku per pinterest" src="images/pinterest60x60.png"></a>
+            <a target="_blank" href="">
+                <img width="30" alt="linku per newsfeed" title="RSS Feed" src="images/newsfeed60x60.png"></a>
+        </div>
+        <div class="onToplinks">
+            <a target="_blank" href="registration.html"><u>Register</u></a> |
+            <a target="_blank" href="login.html"><u>Student Login</u></a>
+
+        </div>
+    </div>
+    <div id="logoContainer" class="">
+        <a class="time4shcool" href="#">Time 4 School</a>
+        <form id="search" action="#" method="POST">
+           <input type="search" name="search" size="20" placeholder="search our website..">
+           <input type="submit" value="Search">
+        </form>
+    </div>
+    
+     <nav>
+        <ul>
+             <li><a href="index.html">HOME</a></li>
+             <li><a href="books.html">BOOKS</a></li>
+             <li><a href ="parents.html">PARENTS</a></li>
+             <li><a href ="tutorials.html">TUTORIALS</a></li>
+             <li><a href ="game.html">FUN</a></li>
+             <li onmouseenter="dropdown();" onmouseleave="dropdown();"><a href="#">MORE</a>
+                <i class="arrow down"></i>
+                <ul id="dropdown">
+                    <li>
+                        <a href="gadgets.html">GADGETS</a>       
+                    </li>
+                    <li>
+                        <a href="contact.html">CONTACT US</a>       
+                    </li>
+                </ul>
+             </li>
+        </ul>
+      </nav>
+      </header>
+
+
+	<div style="width: 800px; margin: 20px auto;">
+	<div class="mainContainer">
+			<h2 style="color: white;">VIDEO TUTORIALS</h2>
+			 <div class="clearfix">
+			 		<div class='leftContainer'>
+			 			<div id="divImg" onclick="playBook()">
+			 				<video id="video" controls autoplay>
+                                <source src="images/fiek.mp4" type="video/mp4">                    
+                            </video>
+			 			</div>
+			 		</div>
+			 		<div class="rightContainer">
+			 			<div class="grid scroll">
+			 				<ul id="list">
+			 					
+			 					
+			 				</ul>
+			 			</div>
+			 		</div>
+			 </div>
+		</div>
+
+		<div style="font-size: 20px; text-align: center;color:white;margin:30px 0px;font-family: Roboto;font-style: italic;">"Study hard what interests you the most in the most undisciplined irreverent and orginal manner possible."</div>
+      
+        <div class="DivList">
+            <ul type="square">
+                <li>Education
+                    <ul>
+                        <li>Social Sciences</li>
+                        <li>Natural Sciences</li>
+                    </ul>
+                </li>
+                <li>Art
+                    <ul>
+                        <li>Modern Art</li>
+                        <li>Classic Art</li>
+                    </ul>
+                </li>
+                 <li>Tech
+                    <ul>
+                        <li>Computer</li>
+                        <li>Mobile</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>    
+        <div class="DivList">
+            <dl>
+                <dt>Social Sciences</dt>
+                <dd>The scientific study of human society and social relationships</dd>
+                <dt>Natural Sciences</dt>
+                <dd>Natural science is a branch of science concerned with the description, prediction, and understanding of natural phenomena. </dd>
+            </dl>   
+        </div>
+	</div>	
+
+       <footer>
+        <div class="footer-col">
+            <div>
+                <h3>ABOUT OUR SCHOOL</h3>
+                <p>The relative degree of education evloves in many ways, that is why we try to grow beside the trend of tech.</p>
+                <a href="#">Read More »</a>
+            </div>
+            <div>
+                <h3>FROM THE BLOG</h3>
+                <h3>Post title</h3>
+                <p>Friday, 6th April 2000</p>
+                <p>When is the new version of the game coming update ?...</p>
+                <a href="#">Read More »</a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3 style="text-align: left;">LINKS</h3>
+            <ul>
+                <li> »  <a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
+                <li> »  <a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a></li>
+                <li> »  <a href="https://www.edx.org/" target="_blank">Edx</a></li>
+                <li> »  <a href="https://www.codingame.com/start" target="_blank">Coding Game</a></li>
+                <li> »  <a href="https://code.org/learn" target="_blank">Code</a></li>
+                <li> »  <a href="https://www.tynker.com/" target="_blank">Tinker</a></li>
+                <li> »  <a href="https://www.e-learningforkids.org#page" target="_blank">e-learningforkids</a></li>
+               
+            </ul>
+        </div>
+        <div class="footer-col">
+            <div>
+                <h3>NEWSLETTER</h3>
+                <p>Join us and recieve productive newsletters.</p>
+                <form action="#" method="POST" id="footerForm" onsubmit="return formValidator1()">
+                    <input type="text" name="name" placeholder="Name" /> <br />
+                    <input type="email" name="name" placeholder="Email" /> <br />
+                    <ol class="errors">
+                        
+                    </ol>
+                    <input type="submit" value="SUBMIT" />
+                </form>
+            </div>
+            <address>
+                <h3 style="text-decoration: underline overline; ">CONTACT US</h3>
+                <p>Tel: xxxxx xxxxxxxxxx</p>
+                <p><a href="mailto:me@example.com">Email: contact@mydomain.com</a></p>
+            </address>
+        </div>
+        <div class="footer-end clearfix">
+            <p class="left">Copyright &copy; 2019 - All Rights Reserved</p>
+            <p class="right">Website by <abbr title="GRUPI7"><mark>G7</mark></abbr></p>
+        </div>
+    </footer>
+        <script>
+            function formValidator1(){
+                var form = document.getElementById("footerForm");
+                var errorsOl = form.querySelector(".errors");
+                errorsOl.innerHTML="";
+                var name = form.querySelector("input[name='name']");
+                var email = form.querySelector("input[name='email']");
+                
+                var inputs = [name,email];
+                if(AreEmpty(inputs,errorsOl)){ return false;}
+            }
+        </script>
+</body>
+</html>

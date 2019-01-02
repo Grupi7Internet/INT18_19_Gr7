@@ -51,8 +51,6 @@ function SlideShowImg(array){
 }   
 
 
-
-
 function SlideImage(x){
     var to;
     var from;
@@ -72,7 +70,6 @@ function SlideImage(x){
      current+=x;
      if(current == -1) 
        current=len-1;
-
 
      $(imgs[current % len]).show("slide",{direction: from},1000).attr("data","current");
      $(controls[current % len]).attr("class","slideshow-button slideshow-button-current");
