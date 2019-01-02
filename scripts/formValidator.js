@@ -21,6 +21,15 @@ function AreEmpty(inputs,errorsOl){
 	return errors;
 }
 
+function JsError(){
+	
+	try {
+		ErrorC();
+	} catch(e){
+		console.log(e);
+	}
+}
+
 function validePhoneNumber(input,errorsOl){
 	if(input.value == "") return false;
 	var p = /[\+\s()]?[0-9]$/;

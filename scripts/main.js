@@ -23,6 +23,7 @@ $(window).scroll(function() {
 var w;
 
 window.onload = function(){
+  JsError();
   colorChanger = document.getElementById("colorChanger");
   var hour = new Date().getHours();
   if(hour >18 || hour < 6){
@@ -77,6 +78,7 @@ window.onload = function(){
 
 }
 
+
 function OpTopPressed(){
   $('html, body').animate({
         scrollTop: $("#top").offset().top
@@ -109,3 +111,13 @@ function startWorker() {
       };
   }
 }
+
+
+// alert(Number.MAX_VALUE);
+// var number = 100.3;
+// alert(number.toExponential());
+// Math.E        
+// Math.SQRT2    
+// Math.SQRT1_2  
+// Math.LN2      
+

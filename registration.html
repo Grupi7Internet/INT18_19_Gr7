@@ -87,7 +87,7 @@ form input[type="date"] {
 <body>
 	<div style="width: 400px;text-align: center;margin:0px auto;">
 		<h1>REGISTER</h1>
-		<form id="Form"  method="POST" action="register.php" onsubmit="return valideForm();" >
+		<form id="Form"  method="POST" action="register.php" onsubmit="return valideForm();" oninput="donateValue.value=parseInt(donate.value)+'$';" >
 
 			<input type="text" style="width: 49.4%" name="name" autofocus placeholder="First Name" onfocusout="ValideName(this)" required>
 			<input type="text"style="width: 49.4%" name="lname" placeholder="Last Name" onfocusout="ValideName(this)" required><br />
@@ -137,8 +137,8 @@ form input[type="date"] {
 			</datalist>
 
 			<p>Do you want to donate?</p>
-			0 <input id="donate" step="5" type="range" name="donate" min="0" max="50" value="0"> 50 <br /> <br />
-			<output name="donateValue" for="donate"></output>
+			0 <input id="donate" step="5" type="range" name="donate" min="0" max="50" value="0"> 50 <br /> 
+			<output name="donateValue"></output> <br />
 
 			<input type="checkbox" id="term" name="termOfUse"> Do you agree with our Term of Use? 
 			<br />

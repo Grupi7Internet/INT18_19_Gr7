@@ -153,7 +153,7 @@ window.onload = function(){
 			context.arc(200, c, 10, a, b, false); 
 			context.stroke();
 
-			// eyes
+			// syt
 			context.beginPath();
 			context.fillStyle = "green";
 			context.arc(190, 45, 3, 0, Math.PI * 2, true); 
@@ -161,23 +161,23 @@ window.onload = function(){
 			context.arc(210, 45, 3, 0, Math.PI * 2, true); 
 			context.fill();
 
-			// body
+			// trupi
 			context.beginPath();
 			context.moveTo(200, 80);
 			context.lineTo(200, 180);
 			context.strokeStyle = "navy";
 			context.stroke();
 
-			// arms
+			// durt
 			context.beginPath();
-			context.strokeStyle = "#0000ff"; // blue
+			context.strokeStyle = "#0000ff";
 			context.moveTo(200, 80);
 			context.lineTo(150, 130);
 			context.moveTo(200, 80);
 			context.lineTo(250, 130);
 			context.stroke();
 
-			// legs
+			// kembet
 			context.beginPath();
 			context.strokeStyle = "orange";
 			context.moveTo(200, 180);
