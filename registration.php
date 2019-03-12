@@ -1,4 +1,19 @@
-
+<?php 
+	$errors = array();
+	$all = "[]";
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
+		$name =$_POST['name'];
+		$gender = ($_POST['gender'] == 'male') ? 0 : 1;
+		$lname =$_POST['lname'];
+		$email =$_POST['email'];
+		$phone =$_POST['bday'];
+		$bday =$_POST['bday'];
+		$status = ($_POST['status'] == 'parent') ? 0 : 1;
+		$password =$_POST['password'];
+		$password1 = $_POST['password1'];
+		$termOfUse =$_POST['termOfUse'];
+		//echo $gender . "    " . $status;
+?>
 
 <!DOCTYPE html>
 <html>
