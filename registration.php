@@ -38,38 +38,7 @@
 		if(!isset($gender)){
 			$errors[] = "gender";
 		}		
-		if(empty($termOfUse) ){
-			$errors[] = "termOfUse";
-		}
-		if(sizeof($errors) == 0){
-			$salt = generateRandomString();
-			$passHash = sha1($password.$salt);
-			$insert = [$name,$lname,$email,$bday,$salt,$passHash,$phone,$gender,$status];
-			
-			array_walk($insert, "sqlInjection");
-
-			$query = "INSERT INTO infos () VALUES ('{$insert[0]}','{$insert[1]}','{$insert[2]}','{$insert[3]}','{$insert[4]}','{$insert[5]}','{$insert[6]}',{$insert[7]},{$insert[7]},'0','')";
-			echo $query;
-			mysqli_query($conn, $query);
-			header("Location: reg.php?email=".$email );
-			die();		
-		}
-		$all = "['$name','$gender','$lname','$email','$bday','$status','$password','$phone','$termOfUse']";
-	}
-
-	function sqlInjection(&$value){
-		global $conn;
-		$value = mysqli_real_escape_string($conn,$value);
-	}
-
-	function StrongPass($pass){
-		$pattern = "#^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.{8,})#";
-		return preg_match($pattern, $pass);
-	}
-
-	$errorString = '["'.implode('","',$errors).'"]';
-	//echo $errorString;
-
+		
 ?>
 
 <!DOCTYPE html>
