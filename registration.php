@@ -12,6 +12,19 @@
 		$password =$_POST['password'];
 		$password1 = $_POST['password1'];
 		$termOfUse =$_POST['termOfUse'];
+		//echo $gender . "    " . $status;
+
+		if(empty($name)){
+			$errors[] = "name";
+		}
+
+		if(empty($lname)){
+			$errors[] = "lname";
+		}
+		if(empty($bday) || time() < strtotime($bday)){
+			$errors[] = "bday";
+		}		
+
 ?>
 
 <!DOCTYPE html>
