@@ -38,7 +38,24 @@
 		if(!isset($gender)){
 			$errors[] = "gender";
 		}		
-		
+		if(empty($termOfUse) ){
+			$errors[] = "termOfUse";
+		}
+	}
+
+	function sqlInjection(&$value){
+		global $conn;
+		$value = mysqli_real_escape_string($conn,$value);
+	}
+
+	function StrongPass($pass){
+		$pattern = "#^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.{8,})#";
+		return preg_match($pattern, $pass);
+	}
+
+	$errorString = '["'.implode('","',$errors).'"]';
+	//echo $errorString;
+
 ?>
 
 <!DOCTYPE html>
