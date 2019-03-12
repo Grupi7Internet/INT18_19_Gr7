@@ -12,7 +12,6 @@
 		$password =$_POST['password'];
 		$password1 = $_POST['password1'];
 		$termOfUse =$_POST['termOfUse'];
-		//echo $gender . "    " . $status;
 ?>
 
 <!DOCTYPE html>
