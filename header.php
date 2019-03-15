@@ -44,4 +44,25 @@
         </form>
     </div>
     
+    <nav>
+        <ul>
+             <li><a href="index.php">HOME</a></li>
+             <li><a href="books.php">BOOKS</a></li>
+             <li><a href ="parents.php">PARENTS</a></li>
+             <li><a href ="tutorials.php">TUTORIALS</a></li>
+             <li><a href ="game.php">FUN</a></li>
+             <li><a href ="chat.php">CHAT</a></li> 
+             <li onmouseenter="dropdown();" onmouseleave="dropdown();"><a href="#">MORE</a>
+                <i class="arrow down"></i>
+                <ul id="dropdown">
+                    <li>
+                        <a href="gadgets.php">GADGETS</a>       
+                    </li>
+                    <li>
+                        <a href="contact.php">CONTACT US</a>       
+                    </li>
+                </ul>
+             </li>
+        </ul>
+      </nav>
       </header>
