@@ -1,4 +1,4 @@
-
+<?php echo "TEST"; ?>
 
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
@@ -24,7 +24,7 @@
     <div id="logoContainer" class="">
         <a class="time4shcool" href="index.php">Time 4 School</a>
         <form id="search" action="#" method="POST">
-           <input type="search" name="search" autocomplete="off" onkeyup size="20" placeholder="search our website..">
+           <input type="search" name="search" autocomplete="off" size="20" placeholder="search our website..">
            <script>
                 
            </script>
