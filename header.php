@@ -26,14 +26,7 @@
         <form id="search" action="#" method="POST">
            <input type="search" name="search" autocomplete="off" onkeyup="ELTI(this);" size="20" placeholder="search our website..">
            <script>
-                function ELTI(input){
-                    var keyword = input.value;
-                    $("#SearchContent").find("ul").empty();
-                    if(keyword.length > 2){
-                        $("#SearchContent").find("ul").load("search.php?k="+encodeURI(keyword));
-                    }
-
-                }
+                
            </script>
            <input type="submit" value="Search">
            <div id="SearchContent">
