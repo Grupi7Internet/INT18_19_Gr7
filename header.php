@@ -24,7 +24,7 @@
     <div id="logoContainer" class="">
         <a class="time4shcool" href="index.php">Time 4 School</a>
         <form id="search" action="#" method="POST">
-           <input type="search" name="search" autocomplete="off" onkeyup="ELTI(this);" size="20" placeholder="search our website..">
+           <input type="search" name="search" autocomplete="off" onkeyup size="20" placeholder="search our website..">
            <script>
                 
            </script>
