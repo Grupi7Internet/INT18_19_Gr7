@@ -21,9 +21,7 @@
 
         </div>
     </div>
-    <div id="logoContainer" class="">
-        <a class="time4shcool" href="index.php">Time 4 School</a>
-        <form id="search" action="#" method="POST">
+   
            <input type="search" name="search" autocomplete="off" size="20" placeholder="search our website..">
            <script>
                 
