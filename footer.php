@@ -30,7 +30,7 @@
             <div>
                 <h3>NEWSLETTER</h3>
                 <p>Join us and recieve productive newsletters.</p>
-                <form action="#" method="POST" id="footerForm">
+                <form action="#" method="POST" id="footerForm" onsubmit="return formValidator1()">
                     <input type="text" name="name" placeholder="Name" /> <br />
                     <input type="email" name="name" placeholder="Email" /> <br />
                     <ol class="errors">
