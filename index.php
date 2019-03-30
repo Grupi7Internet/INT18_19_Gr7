@@ -38,6 +38,7 @@
 </head>
 
 <body>
+    <?php require("header.php"); ?>
   <div style="width: 1200px; margin: 0 auto;">
     <div id='slideshow'>
         <div id="slideshowPhotos">
@@ -120,7 +121,7 @@
     <img id="colorChanger" src="images/sun.png" width="100%" height="100%" alt="">
 </div>
 
-
+<?php include("footer.php"); ?>
 
 </body>
 
