@@ -121,7 +121,6 @@
     <img id="colorChanger" src="images/sun.png" width="100%" height="100%" alt="">
 </div>
 
-<?php include("footer.php"); ?>
 
 </body>
 
