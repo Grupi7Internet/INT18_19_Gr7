@@ -32,12 +32,22 @@
 		{
 			$errors[] = "passwordnot";
 		}
-		
+		if(!isset($status)){
+			$errors[] = "status";
+		}		
+		if(!isset($gender)){
+			$errors[] = "gender";
+		}		
+		if(empty($termOfUse) ){
+			$errors[] = "termOfUse";
+		}
 	}
 
 
 	
 
+	$errorString = '["'.implode('","',$errors).'"]';
+	//echo $errorString;
 
 ?>
 
