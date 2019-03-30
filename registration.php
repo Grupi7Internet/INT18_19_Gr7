@@ -22,9 +22,7 @@
 			$errors[] = "lname";
 		}
 
-		if(empty($email) || !preg_match('#^[\w\.]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$#',$email)){
-			$errors[] = "email";
-		}
+		
 		if(empty($phone)){
 			$errors[] = "phone";
 		}
@@ -43,18 +41,9 @@
 		}
 	}
 
-	function sqlInjection(&$value){
-		global $conn;
-		$value = mysqli_real_escape_string($conn,$value);
-	}
 
-	function StrongPass($pass){
-		$pattern = "#^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.{8,})#";
-		return preg_match($pattern, $pass);
-	}
+	
 
-	$errorString = '["'.implode('","',$errors).'"]';
-	//echo $errorString;
 
 ?>
 
