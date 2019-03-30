@@ -203,8 +203,29 @@ form input[type="date"] {
 	</div>
 
 	<script>
-		
-	</script>
+		var errors = <?php echo $errorString  ?>;
+
+		for(var i =0; i < errors.length;i++){
+			if(errors[i]=="passwordnot")
+			{
+				$("[name='"+errors[i]+"']").show();
+			}
+			else{
+			$("[name='"+errors[i]+"']").next().next().show();
+			}
+		}
+		var b = <?php echo $all ?>;
+		var a = ["name","gender","lname","email","bday","status","password","phone","termOfUse"];
+		for(var i = 0; i < a.length; i++){
+			if(!errors.includes(a[i])){
+				if(a[i] == "gender" || a[i] == "status" || a[i] == "termOfUse"){
+					$("[value='"+b[i]+"']").prop('checked',true);
+				}else{
+					$("[name='"+a[i]+"']").attr("value",b[i]);
+				}
+			}
+		}
+
 
 </body>
 </html>
