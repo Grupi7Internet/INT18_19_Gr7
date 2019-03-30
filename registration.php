@@ -22,7 +22,9 @@
 			$errors[] = "lname";
 		}
 
-		
+		if(empty($email) || !preg_match('#^[\w\.]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$#',$email)){
+			$errors[] = "email";
+		}
 		if(empty($phone)){
 			$errors[] = "phone";
 		}
