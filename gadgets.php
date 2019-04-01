@@ -79,16 +79,7 @@
 <body style="color: rgba(0,0,0,.65)" >
 <?php require("header.php"); ?>    
 
-        <div class="LinksAboutTech">
-
-                <h2 id="h2set">The best part of going back to school is getting new gadgets.</h2>
-
-                
-                <ul>
-                   
-                </ul>
-            </div>
-
+       
 
         <?php include("footer.php"); ?>
 </body>
