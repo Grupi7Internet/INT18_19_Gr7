@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/addtodb.css">
 <body>
 		<div class="main">
-		<form action="add.php" method="POST" enctype="multipart/form-data">
+		<form method="POST">
 				
 				<select id="aaa" name="type" onchange="addtodb()" >
 					<option value="Book">Literature</option>
