@@ -65,7 +65,48 @@
 		</form>
 		</div>
 
-	
+		<script type="text/javascript">
+				
+				function addtodb()
+				{ 
+					var a = document.getElementById("aaa").selectedIndex;
+					var L = document.getElementById("Literature");
+					var V = document.getElementById("Video");
+					var P = document.getElementById("Photo");
+					var C = document.getElementById("Course");
+					var F = document.getElementById("file");
+
+					if(a == 0){
+						L.style.display = 'inline';
+						V.style.display = 'none';
+						P.style.display = 'none';
+						C.style.display = 'none';
+						F.style.display = 'inline';
+					}else if(a == 1){
+						L.style.display = 'none';
+						V.style.display = 'block';
+						C.style.display = 'none';
+						P.style.display = 'none';
+						F.style.display = 'inline';
+					}else if(a == 2){
+						L.style.display = 'none';
+						V.style.display = 'none';
+						C.style.display = 'none';
+						P.style.display = 'block';
+						F.style.display = 'none';
+					}else {
+						L.style.display = 'none';
+						V.style.display = 'none';
+						C.style.display = 'block';
+						P.style.display = 'none';
+						F.style.display = 'none';
+					}
+				}
+
+
+
+
+		</script>
 
 </body>
 </html>
