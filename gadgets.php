@@ -77,7 +77,7 @@
 
   </script>
 </head>
-<body style="color: rgba(0,0,0,.65)" >
+<body >
 <?php require("header.php"); ?>    
 
         <div class="LinksAboutTech">
