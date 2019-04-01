@@ -50,27 +50,7 @@
 			}
 		
 	</style>
-	<script>
-		var a=false;
-        var teksti; 
-		$(document).ready(function(){
-  		$("#h2set").on("click",function(){
-  		
-	  		if(a)
-	  		{
-                teksti=$("#h2set").text();
-		    	$("#h2set").text("Getting new gadgets is part of the right way back to School.");
-		    	a=false;
-	    	}
-	    	else 
-	    	{
-		    	$("#h2set").text(teksti);
-		    	a=true;
-	    	}
-    	});
-        });
-
-	</script>
+	
 	
     <script type="text/javascript">
       
