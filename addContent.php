@@ -9,7 +9,10 @@
 		<div class="main">
 		<form action="add.php" method="POST" enctype="multipart/form-data">
 				
-			
+				<select id="aaa" name="type" onchange="addtodb()" >
+					<option value="Book">Literature</option>
+					<option value="Video">Video</option>
+				</select>
 
 				<div id="Literature">
 					<table cellspacing="5">
