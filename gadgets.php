@@ -77,6 +77,7 @@
   </script>
 </head>
 <body style="color: rgba(0,0,0,.65)" >
+<?php require("header.php"); ?>    
 
         <div class="LinksAboutTech">
 
@@ -96,5 +97,6 @@
             </div>
         </div>
 
+        <?php include("footer.php"); ?>
 </body>
 </html>
