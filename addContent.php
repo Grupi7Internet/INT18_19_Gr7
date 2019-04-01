@@ -16,17 +16,15 @@
 					<option value="Course">Course</option>
 				</select>
 
-				
-
-				<div id="Photo" style="display: none;">
+				<div id="Literature">
 					<table cellspacing="5">
-						<tr><td>Title: </td> <td><input type="text" name="Gtitle"> </td></tr>
-						<tr><td>Cover: </td> <td><input type="text" name="Gimg"> </td></tr>
-						<tr><td>Source: </td> <td><input type="text" name="Glink"> </td></tr>
-
-						
+						<tr><td>Title: </td> <td><input type="text" name="title"> </td></tr>
+						<tr><td>Autori: </td> <td><input type="text" name="author"> </td></tr>
+						<tr><td>Cover: </td> <td><input type="text" name="img"></td></tr>
+						<tr><td>Description: </td> <td><input type="text" name="description"></td></tr>
+						<tr><td>Pages: </td> <td><input type="text" name="pages"></td></tr>	
+						<tr><td>Rating: </td> <td><input type="text" name="rating"></td></tr>		
 					</table>
-
 				</div>
 
 				
@@ -37,6 +35,7 @@
 		</form>
 		</div>
 
+	
 
 </body>
 </html>
