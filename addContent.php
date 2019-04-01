@@ -12,6 +12,7 @@
 				<select id="aaa" name="type" onchange="addtodb()" >
 					<option value="Book">Literature</option>
 					<option value="Video">Video</option>
+					<option value="Course">Course</option>
 				</select>
 
 				<div id="Literature">
