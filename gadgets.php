@@ -50,14 +50,33 @@
 			}
 		
 	</style>
-	
+	<script>
+		var a=false;
+        var teksti; 
+		$(document).ready(function(){
+  		$("#h2set").on("click",function(){
+  		
+	  		if(a)
+	  		{
+                teksti=$("#h2set").text();
+		    	$("#h2set").text("Getting new gadgets is part of the right way back to School.");
+		    	a=false;
+	    	}
+	    	else 
+	    	{
+		    	$("#h2set").text(teksti);
+		    	a=true;
+	    	}
+    	});
+        });
+
+	</script>
 	
     <script type="text/javascript">
       
   </script>
 </head>
 <body style="color: rgba(0,0,0,.65)" >
-<?php require("header.php"); ?>    
 
         <div class="LinksAboutTech">
 
@@ -77,6 +96,5 @@
             </div>
         </div>
 
-        <?php include("footer.php"); ?>
 </body>
 </html>
