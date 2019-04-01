@@ -27,6 +27,18 @@
 					</table>
 				</div>
 
+				<div id="Video" style="display: none;">
+					<table cellspacing="5">
+						<tr><td>Title: </td> <td><input type="text" name="Vtitle"> </td></tr>
+						<tr><td>Autori: </td> <td><input type="text" name="Vauthor"> </td></tr>
+						<tr><td>Cover: </td> <td><input type="text" name="Vimg"></td></tr>
+						<tr><td>Description: </td> <td><input type="text" name="Vdescription"></td></tr>
+						<tr><td>Length: </td> <td><input type="text" name="Vlength"></td></tr>	
+						<tr><td>Rating: </td> <td><input type="text" name="Vrating"></td></tr>	
+						<tr><td>Course: </td> <td><input type="text" name="Vcourse"></td></tr>	
+					</table>
+				</div>
+
 				
 				<input id="file" type="file" name="ff" >
 				<br><br>
