@@ -79,7 +79,23 @@
 <body style="color: rgba(0,0,0,.65)" >
 <?php require("header.php"); ?>    
 
-       
+        <div class="LinksAboutTech">
+
+                <h2 id="h2set">The best part of going back to school is getting new gadgets.</h2>
+
+                
+                <ul>
+                   
+                </ul>
+            </div>
+
+        <div id="FullDiv" style="display: none;" onclick="document.getElementById('Login').style.display = 'none'; this.style.display = 'none';">
+            <div id="Login">
+                <p style="font-style: medium; text-align: center;">You should login to continue. If you don't have an<br /> account please register.</p>
+                <div onclick="Login();">LOGIN</div>
+                <div>REGISTER</div>
+            </div>
+        </div>
 
         <?php include("footer.php"); ?>
 </body>
