@@ -39,7 +39,25 @@
 					</table>
 				</div>
 
-				
+				<div id="Photo" style="display: none;">
+					<table cellspacing="5">
+						<tr><td>Title: </td> <td><input type="text" name="Gtitle"> </td></tr>
+						<tr><td>Cover: </td> <td><input type="text" name="Gimg"> </td></tr>
+						<tr><td>Source: </td> <td><input type="text" name="Glink"> </td></tr>
+
+						
+					</table>
+
+				</div>
+
+				<div id="Course" style="display: none;">
+					<table cellspacing="5">
+						<tr><td>Title: </td> <td><input type="text" name="Ctitle"> </td></tr>
+						<tr><td>Proffesor: </td> <td><input type="text" name="prof"> </td></tr>
+
+						
+					</table>
+				</div>	
 				<input id="file" type="file" name="ff" >
 				<br><br>
 				<input type="submit" name="">
