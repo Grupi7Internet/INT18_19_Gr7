@@ -12,11 +12,13 @@
 		margin:0 auto;
 	}
 
+
     .LinksAboutTech ul {
         list-style: none;
         padding: 0px;
         text-align: center;
     }
+
 
     .LinksAboutTech  ul li {
         display: inline-block;
@@ -30,6 +32,7 @@
         
     }
 
+
     .LinksAboutTech ul li a {
         font-weight: bolder;
         color: white;
@@ -38,6 +41,7 @@
     a:hover {
         color: white;
     }
+
 
 	footer p{
 			font-family: arial;
@@ -70,6 +74,7 @@
     	});
         });
 
+
 	</script>
 	
     <script type="text/javascript">
@@ -79,15 +84,19 @@
 <body style="color: rgba(0,0,0,.65)" >
 <?php require("header.php"); ?>    
 
+
         <div class="LinksAboutTech">
 
+
                 <h2 id="h2set">The best part of going back to school is getting new gadgets.</h2>
+
 
                 
                 <ul>
                    
                 </ul>
             </div>
+
 
         <div id="FullDiv" style="display: none;" onclick="document.getElementById('Login').style.display = 'none'; this.style.display = 'none';">
             <div id="Login">
@@ -96,6 +105,7 @@
                 <div>REGISTER</div>
             </div>
         </div>
+
 
         <?php include("footer.php"); ?>
 </body>
