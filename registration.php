@@ -226,6 +226,27 @@ form input[type="date"] {
 			}
 		}
 
+		var a = ["name","gender","lname","email","bday","status","password","phone","termOfUse"];
+		for(var i = 0; i < a.length; i++){
+			if(!errors.includes(a[i])){
+				if(a[i] == "gender" || a[i] == "status" || a[i] == "termOfUse"){
+					$("[value='"+b[i]+"']").prop('checked',true);
+				}else{
+					$("[name='"+a[i]+"']").attr("value",b[i]);
+				}
+			}
+		}
+		var a = ["name","gender","lname","email","bday","status","password","phone","termOfUse"];
+		for(var i = 0; i < a.length; i++){
+			if(!errors.includes(a[i])){
+				if(a[i] == "gender" || a[i] == "status" || a[i] == "termOfUse"){
+					$("[value='"+b[i]+"']").prop('checked',true);
+				}else{
+					$("[name='"+a[i]+"']").attr("value",b[i]);
+				}
+			}
+		}
+
 
 </body>
 </html>
