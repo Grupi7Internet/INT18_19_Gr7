@@ -9,7 +9,7 @@
 }
 
 #ContactForm table{
-	width: 50%;
+	width: 100%;
 }
 
 #ContactForm input[type="submit"] {
@@ -24,4 +24,9 @@
 }
 
 .inputError::placeholder {
+}
+
+#ContactForm {
+	float: left;
+	width: 50%;
 }

@@ -82,3 +82,34 @@ background:linear-gradient(45deg, grey, grey 80%);
 opacity: 0.9;
 }
 
+
+#Login {
+    position: absolute;
+   top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    padding: 80px;
+    font-family: sans-serif;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #146587;
+}
+
+#Login div {
+  padding: 20px 60px;
+  background-color: #cc381b;
+  color: white;
+  font-size: 24px;
+  margin: 20px;
+  text-align: center;
+  cursor: pointer;
+
+}
+#FullDiv {
+  display: none;
+  background-color: #000000d9;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+ }

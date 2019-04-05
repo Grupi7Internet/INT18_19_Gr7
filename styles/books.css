@@ -132,3 +132,23 @@
 	font-weight: bold;
 }
 
+#Login {
+	position: absolute;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	background-color: red;
+  	padding: 100px;
+  	border-radius: 20px;
+  	background-color: #715e5e;
+}
+
+#Login div {
+	padding: 20px 60px;
+	background-color: lightblue;
+	margin: 20px;
+	border-radius: 50px;
+	text-align: center;
+	cursor: pointer;
+
+}
