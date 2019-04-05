@@ -11,6 +11,12 @@
 		$password1 = $_POST['password1'];
 		$termOfUse =$_POST['termOfUse'];
 		//echo $gender . "    " . $status;
+		$phone =$_POST['bday'];
+		$bday =$_POST['bday'];
+		$status = ($_POST['status'] == 'parent') ? 0 : 1;
+		$password =$_POST['password'];
+		$password1 = $_POST['password1'];
+		$termOfUse =$_POST['termOfUse'];
 
 		if(empty($name)){
 			$errors[] = "name";
