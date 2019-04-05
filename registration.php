@@ -1,7 +1,5 @@
 <?php 
-	$errors = array();
-	$all = "[]";
-	if($_SERVER["REQUEST_METHOD"] == "POST"){
+	
 		$name =$_POST['name'];
 		$gender = ($_POST['gender'] == 'male') ? 0 : 1;
 		$lname =$_POST['lname'];
