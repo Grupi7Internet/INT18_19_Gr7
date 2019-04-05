@@ -47,5 +47,27 @@ body {
 	text-align: center;
 	background-color: #fffff7;
 }
+td
+{
+	font-weight: bold;
+}
+input[type="submit"] {
+	box-shadow: 2px 2px grey;
+	float: right;
+	border: none;
+	font-size: 15px;
+	background-color: lightblue;
+	border-radius:3px;
+	font-family: Arial;
+	font-weight: bold;
+}input[type="file"] {
+	
+	float: right;
+	border-style: none;
+	border: none;
+	font-size: 15px;
+	background-color: lightblue;
+}
+
 
 
