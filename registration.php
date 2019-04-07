@@ -11,12 +11,7 @@
 		$password1 = $_POST['password1'];
 		$termOfUse =$_POST['termOfUse'];
 		//echo $gender . "    " . $status;
-		$phone =$_POST['bday'];
-		$bday =$_POST['bday'];
-		$status = ($_POST['status'] == 'parent') ? 0 : 1;
-		$password =$_POST['password'];
-		$password1 = $_POST['password1'];
-		$termOfUse =$_POST['termOfUse'];
+
 
 		if(empty($name)){
 			$errors[] = "name";
@@ -26,18 +21,7 @@
 			$errors[] = "lname";
 		}
 
-		if(empty($email) || !preg_match('#^[\w\.]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$#',$email)){
-			$errors[] = "email";
-		}
-		if(empty($phone)){
-			$errors[] = "phone";
-		}
-		if($password!=$password1)
-		{
-			$errors[] = "passwordnot";
-		}
-		if(!isset($status)){
-			$errors[] = "status";
+	
 		}		
 		if(!isset($gender)){
 			$errors[] = "gender";
