@@ -1,4 +1,6 @@
-<?php echo "MIER ESHTE";?>
+<?php echo "MIER ESHTE";
+echo "MIER ESHTE";
+echo "MIER ESHTE";?>
 <!DOCTYPE html>
 <html>
 <head>
