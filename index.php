@@ -16,15 +16,7 @@
     transition: all .3s ease-in-out;
     }
     </style>
-    <link rel="stylesheet" type="text/css" href="styles/header.css">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="styles/footer.css">
-    <script src="scripts/jquery.min.js"></script>
-    <script src="scripts/jquery-ui.min.js"></script>
-    <script src="scripts/formValidator.js"></script>
-    <script src="scripts/color.js"></script>
-    <script src="scripts/slideshow.js"></script>
-    <script src="scripts/main.js"></script>
+s
 
     <script type="text/javascript">
     function dropdown(){
