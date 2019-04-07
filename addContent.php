@@ -87,18 +87,6 @@
 						C.style.display = 'none';
 						P.style.display = 'none';
 						F.style.display = 'inline';
-					}else if(a == 2){
-						L.style.display = 'none';
-						V.style.display = 'none';
-						C.style.display = 'none';
-						P.style.display = 'block';
-						F.style.display = 'none';
-					}else {
-						L.style.display = 'none';
-						V.style.display = 'none';
-						C.style.display = 'block';
-						P.style.display = 'none';
-						F.style.display = 'none';
 					}
 				}
 
