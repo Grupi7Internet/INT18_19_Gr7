@@ -126,7 +126,7 @@
 
 
 		</script>
-		
+
 		<script type="text/javascript">
 				
 				function addtodb()
@@ -139,6 +139,10 @@
 					var F = document.getElementById("file");
 
 					if(a == 0){
+						L.style.display = 'inline';
+						V.style.display = 'none';
+						P.style.display = 'none';
+						
 						L.style.display = 'inline';
 						V.style.display = 'none';
 						P.style.display = 'none';
