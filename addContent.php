@@ -141,8 +141,8 @@
 					if(a == 0){
 						L.style.display = 'inline';
 						V.style.display = 'none';
-						P.style.display = 'none';
-						
+						P .style.display = 'none';
+
 						L.style.display = 'inline';
 						V.style.display = 'none';
 						P.style.display = 'none';
