@@ -41,7 +41,10 @@
     </head>
 
     <body>
-    
+    <title>Back To School</title>
+    </head>
+    <title>Back To School</title>
+    </head>
     <div style="width: 1200px; margin: 0 auto;">
     <div id='slideshow'>
     <div id="slideshowPhotos">
