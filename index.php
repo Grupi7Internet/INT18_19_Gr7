@@ -41,7 +41,7 @@
     </head>
 
     <body>
-    <?php require("header.php"); ?>
+    
     <div style="width: 1200px; margin: 0 auto;">
     <div id='slideshow'>
     <div id="slideshowPhotos">
