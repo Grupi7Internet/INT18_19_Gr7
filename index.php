@@ -16,9 +16,18 @@
     transition: all .3s ease-in-out;
     }
     </style>
-s
+    <link rel="stylesheet" type="text/css" href="styles/header.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/footer.css">
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/formValidator.js"></script>
+    <script src="scripts/color.js"></script>
+    <script src="scripts/slideshow.js"></script>
+    <script src="scripts/main.js"></script>
 
     <script type="text/javascript">
+
     function dropdown(){
     $("#dropdown").slideToggle();
     }
@@ -26,6 +35,8 @@ s
 
     </script>
 
+    <title>Back To School</title>
+    </head>
     <title>Back To School</title>
     </head>
 
