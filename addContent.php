@@ -143,7 +143,7 @@
 						V.style.display = 'none';
 						P .style.display = 'none';
 
-						L.style.display = 'inline';
+						L  .style.display = 'inline';
 						V.style.display = 'none';
 						P.style.display = 'none';
 						C.style.display = 'none';
