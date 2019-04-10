@@ -71,7 +71,17 @@
 			$this->cid = $cid;
 		}
 
-	
+		public function __get($filed){
+			if(property_exists($this, $filed)){
+				return $this->$filed;
+			}
+		}
+
+		public function __set($filed, $value){
+			if(property_exists($this, $filed)){
+				$this->$filed = $value;
+			}
+		}
 
 		
 	}
