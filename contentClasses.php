@@ -114,7 +114,31 @@
 		private $description;
 		private $cid;
 
-		
+		public function __construct($img,$title,$source,$length,$author,$rating,$description,$cid){
+			parent::__construct($img,$title,$source);
+			$this->length = $length;
+			$this->author = $author;
+			$this->rating = $rating;
+			$this->description = $description;
+			$this->cid = $cid;
+		}
+
+		public function __construct($img,$title,$source,$length,$author,$rating,$description,$cid){
+			parent::__construct($img,$title,$source);
+			$this->length = $length;
+			$this->author = $author;
+			$this->rating = $rating;
+			$this->description = $description;
+			$this->cid = $cid;
+		}
+		public function __construct($img,$title,$source,$length,$author,$rating,$description,$cid){
+			parent::__construct($img,$title,$source);
+			$this->length = $length;
+			$this->author = $author;
+			$this->rating = $rating;
+			$this->description = $description;
+			$this->cid = $cid;
+		}
 
 		public function __get($filed){
 			if(property_exists($this, $filed)){
