@@ -168,11 +168,16 @@
 			}
 		}
 
-		public function __set($filed, $value){
+		
+		public function __get($filed){
 			if(property_exists($this, $filed)){
-				$this->$filed = $value;
+				return $this->$filed;
 			}
-		}
+		}		
+		
+		
+		
+
 
 	}
 
