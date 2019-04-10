@@ -135,12 +135,7 @@
 			}
 		}
 
-		public function SaveToDb(){
-			global $conn;
-			$query = sprintf("INSERT INTO Videos (title,author,source,cover,description,length,rating,cid) VALUES ('%s','%s','%s','%s','%s',%s,%f,%d);", $this->title,$this->author,$this->source,$this->img,$this->description,$this->length,$this->rating,$this->cid);
-			echo $query;
-			mysqli_query($conn, $query);
-		}
+		
 	}
 
 	
