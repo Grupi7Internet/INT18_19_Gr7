@@ -129,11 +129,7 @@
 			}
 		}
 
-		public function __set($filed, $value){
-			if(property_exists($this, $filed)){
-				$this->$filed = $value;
-			}
-		}
+		
 
 		class Gadget extends items {
 
