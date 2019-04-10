@@ -135,7 +135,27 @@
 			}
 		}
 
-		
+		class Gadget extends items {
+
+
+		public function __construct($img,$title,$source){
+			parent::__construct($img,$title,$source);
+		}
+
+		public function __get($filed){
+			if(property_exists($this, $filed)){
+				return $this->$filed;
+			}
+		}
+
+		public function __set($filed, $value){
+			if(property_exists($this, $filed)){
+				$this->$filed = $value;
+			}
+		}
+
+	}
+
 	}
 
 	
