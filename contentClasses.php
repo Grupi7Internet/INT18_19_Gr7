@@ -105,12 +105,6 @@
 			}
 		}
 
-		public function SaveToDb(){
-			global $conn;
-			$query = sprintf("INSERT INTO gadgets (title,link,img) VALUES ('%s','%s','%s');", $this->title,$this->source,$this->img);
-			echo $query;
-			mysqli_query($conn, $query);
-		}
 	}
 
 ?>
