@@ -100,6 +100,15 @@
 		
 		
 	</div>
+				</canvas>
+		</div>
+		<p><a style="color: white;" href="Score.php">View Scores</a></p>
+
+		
+		
+	</div>
+	
+
 
 	<script>
 function allowDrop(ev) {
