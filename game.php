@@ -33,9 +33,29 @@
 			top:30px;
 			left: 0;	
 		}
-		#r
-	<script src="scripts/jquery.min.js"></script>
+		#right {
+			position: absolute;
+			top:30px;
+			left: 60px;	
+		}
+		#down {
+			position: absolute;
+			top:60px;
+			left: 30px;
+		}
 
+	</style>
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/game.js"></script>
+</head>
+<body>
+	<div style="width: 1000px; margin: 40px auto;">
+		<div style="display: inline-block;position: relative;vertical-align: middle;">
+			
+			<div id="div1" style="border: 1px solid white;height: 50px;width: 50px;float: left;" ondrop="drop(event)" ondragover="allowDrop(event)">
+				
+			</div>
+		
 		<div id="div2" style="border: 1px solid white;height: 50px;width: 50px;float: right;" ondrop="drop(event)" ondragover="allowDrop(event)">
 			<img id="drag1" src="images/sun.png" draggable="true" ondragstart="drag(event)" width="50">
 		</div>
