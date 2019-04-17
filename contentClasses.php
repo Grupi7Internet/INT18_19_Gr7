@@ -81,30 +81,6 @@
 			$this->rating = $rating;
 			$this->description = $description;
 		}
-
-		public function __get($filed){
-			if(property_exists($this, $filed)){
-				return $this->$filed;
-			}
-		}
-
-		public function __set($filed, $value){
-			if(property_exists($this, $filed)){
-				$this->$filed = $value;
-			}
-		}
-
-		public function SaveToDb(){
-			global $conn;
-			echo $this->img;
-			$query = sprintf("INSERT INTO Books (title,author,source,cover,description,pages,rating) VALUES ('%s','%s','%s','%s','%s',%d,%f);", $this->title,$this->author,$this->source,$this->img,$this->description,$this->pages,$this->rating);
-			echo $query;
-			mysqli_query($conn, $query);
-		}
-
-		function __destruct() {
-        	print "Destroying";
-    	}
 	}
 
 	class Video extends items {
@@ -154,26 +130,7 @@
 			$this->cid = $cid;
 		}
 		
-
-		class Gadget extends items {
-
-
-		public function __construct($img,$title,$source){
-			parent::__construct($img,$title,$source);
-		}
-
-		public function __get($filed){
-			if(property_exists($this, $filed)){
-				return $this->$filed;
-			}
-		}
-
-		
-		public function __get($filed){
-			if(property_exists($this, $filed)){
-				return $this->$filed;
-			}
-		}		
+	
 		
 		
 		
