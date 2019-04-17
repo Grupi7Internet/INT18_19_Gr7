@@ -33,18 +33,7 @@
 			top:30px;
 			left: 0;	
 		}
-		#right {
-			position: absolute;
-			top:30px;
-			left: 60px;	
-		}
-		#down {
-			position: absolute;
-			top:60px;
-			left: 30px;
-		}
-
-	</style>
+		#r
 	<script src="scripts/jquery.min.js"></script>
 	<script src="scripts/game.js"></script>
 </head>
