@@ -73,17 +73,25 @@
 				<button id="down" onmousedown="downPressed=true;" onmouseup=" downPressed = false;">D</button>
 			</div>	
 		</div>
-		<div style="display: inline-block;vertical-align: middle;">
-			<canvas id="canvas1" width="400px" height="300px" >
-			</canvas>
-		</div>
-		<p><a style="color: white;" href="Score.php">View Scores</a></p>
-
 		
-		
-	</div>
 
+	<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
 
+function drag(ev) {
+  ev.dataTransfer.setData("drag", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("drag");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+</body>
 </html>
 
 
