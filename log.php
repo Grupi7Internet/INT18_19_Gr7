@@ -42,5 +42,4 @@
 	}
 
 	$a = new User();
-	$a->WriteFile();	
 ?>
