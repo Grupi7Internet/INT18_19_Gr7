@@ -34,6 +34,7 @@
 			}
 		}	
 
+		
 		function Tojson(){
 			return '{"ip":"'.$this->ip.'","country":"'.$this->country.'","time":"'.$this->time.'"}';
 		}
