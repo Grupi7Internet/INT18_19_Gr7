@@ -13,8 +13,13 @@
 			$this->time = date("d/m/Y G:i:s");
 		}
 
-		
+		function Tojson(){
+			return '{"ip":"'.$this->ip.'","country":"'.$this->country.'","time":"'.$this->time.'"}';
+		}
 
 		
-	}	
+	}
+
+	$a = new User();
+	$a->WriteFile();	
 ?>
