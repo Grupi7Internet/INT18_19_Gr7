@@ -23,6 +23,8 @@
 		echo("An activation link has been sended to your email.");
 		
 	}elseif (isset($_GET["activation"])) {
+		$hash = $_GET["activation"];
+		$e = mysqli_real_escape_string($_GET["e"]);
 		
 	}	
 ?>
