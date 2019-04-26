@@ -28,8 +28,5 @@
 		$query = "UPDATE infos SET confirmed = 'yes' WHERE email = '$e' and confirmed = '$hash';";
 		mysqli_query($conn, $query);
 		echo("Your account is atived. <a href='../' >Go to main page</a>");
-		echo("Your account is atived. <a href='../' >Go to main page</a>");
-		echo("Your account is atived. <a href='../' >Go to main page</a>");
-		echo("Your account is atived. <a href='../' >Go to main page</a>");
 	}	
 ?>
