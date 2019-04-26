@@ -18,8 +18,8 @@
 		        'content' => http_build_query($data)
 		    )
 		);
-		
-		
+		$context  = stream_context_create($options);
+		$result = file_get_contents("http://time4school.000webhostapp.com/mail.php", false, 
 	}elseif (isset($_GET["activation"])) {
 		
 	}	
