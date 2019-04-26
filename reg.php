@@ -19,7 +19,9 @@
 		    )
 		);
 		$context  = stream_context_create($options);
-		$result = file_get_contents("http://time4school.000webhostapp.com/mail.php", false, 
+		$result = file_get_contents("http://time4school.000webhostapp.com/mail.php", false, $context);
+		echo("An activation link has been sended to your email.");
+		
 	}elseif (isset($_GET["activation"])) {
 		
 	}	
