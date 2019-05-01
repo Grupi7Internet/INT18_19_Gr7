@@ -175,29 +175,51 @@
                         <th>Name:<td>Eltion</td>
                         </th>
                     </tr>
-   
+                    <tr>
+                        <th>Surname:<td>Musa</td>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Email:<td class="email">eltimusa4@gmail.com</td>
+                        </th>
+                    </tr>
+                </table>
+            </td>
+            <td class="baseCell">
+                <table border="1" class="tablesUS">
+                    <tr>
+                        <td colspan="2"><img align="center" src="images/profile.png"></td>
+                    </tr>
+                    <tr>
+                        <th>Name:<td>Genci</td>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Surname:<td>Balaj</td>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Email:<td class="email">gencibalaj@gmail.com</td>
+                        </th>
+                    </tr>
                 </table>
             </td>
         </table>
     </div>
     <button style="position: fixed;right: 20px;bottom: 20px;" onclick="Location();">Where am I?</button>
     <script type="text/javascript">
-      
+        function Location() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(Position);
+            }
+        }
+
+        function Position(position) {
+            var latlon = position.coords.latitude + "," + position.coords.longitude;
+            alert("Your coordinates are: " + latlon);
+        }
 
 
-d>
-        </table>
-    </div>
-    <button style="position: fixed;right: 20px;bottom: 20px;" onclick="Location();">Where am I?</button>
-    <script type="text/javascript">
-      
-
-d>
-        </table>
-    </div>
-    <button style="position: fixed;right: 20px;bottom: 20px;" onclick="Location();">Where am I?</button>
-    <script type="text/javascript">
-      
 
        
     </script>
