@@ -226,7 +226,9 @@
             var errorsOl = document.getElementById("errors");
             errorsOl.innerHTML = "";
             var name = form.querySelector("input[name='name']");
-            var email = form.querySelector("input
+            var email = form.querySelector("input[name='email']");
+            var phone = form.querySelector("input[name='phone']");
+            var message = form.querySelector("textarea[name='message']");
     </script>
     <?php include("footer.php"); ?>
 </body>
