@@ -221,7 +221,12 @@
 
 
 
-       
+        function formValidator() {
+            var form = document.getElementById("ContactForm");
+            var errorsOl = document.getElementById("errors");
+            errorsOl.innerHTML = "";
+            var name = form.querySelector("input[name='name']");
+            var email = form.querySelector("input
     </script>
     <?php include("footer.php"); ?>
 </body>
