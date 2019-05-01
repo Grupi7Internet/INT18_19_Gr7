@@ -160,31 +160,7 @@
                         <th>Surname:<td>Thaqi</td>
                         </th>
                     </tr>
-                    <tr>
-                        <th>Email:<td>ditithaqi@gmail.com</td>
-                        </th>
-                    </tr>
-                </table>
-            </td>
-            <td class="baseCell">
-                <table border="1" class="tablesUS">
-                    <tr>
-                        <td colspan="2"><img align="center" src="images/profile.png"></td>
-                    </tr>
-                    <tr>
-                        <th>Name:<td>Eltion</td>
-                        </th>
-                    </tr>
-   
-                </table>
-            </td>
-        </table>
-    </div>
-    <button style="position: fixed;right: 20px;bottom: 20px;" onclick="Location();">Where am I?</button>
-    <script type="text/javascript">
-      
-
-
+        
        
     </script>
     <?php include("footer.php"); ?>
