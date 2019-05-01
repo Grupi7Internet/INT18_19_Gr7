@@ -229,6 +229,13 @@
             var email = form.querySelector("input[name='email']");
             var phone = form.querySelector("input[name='phone']");
             var message = form.querySelector("textarea[name='message']");
+
+            var inputs = [name, email, phone, message];
+            var v = validePhoneNumber(phone, errorsOl);
+            if (AreEmpty(inputs, errorsOl) || !v) {
+                return false;
+            }
+        }
     </script>
     <?php include("footer.php"); ?>
 </body>
