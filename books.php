@@ -145,7 +145,12 @@
             document.getElementById('Login').style.display = 'block';
         }
 
-                }
+        <?php 
+            $query = "SELECT * FROM Books;";
+            $result = mysqli_query($conn, $query);
+            while ($row = mysqli_fetch_assoc($result)) {
+                $link = ($loggedin) ? "files/Books/".$row['source'] :  "                        "'.$link.'"));' . "\n\n\t\t";
+            }
         ?>
     </script>
 
