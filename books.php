@@ -149,7 +149,16 @@
             $query = "SELECT * FROM Books;";
             $result = mysqli_query($conn, $query);
             while ($row = mysqli_fetch_assoc($result)) {
-                $link = ($loggedin) ? "files/Books/".$row['source'] :  "                        "'.$link.'"));' . "\n\n\t\t";
+                $link = ($loggedin) ? "files/Books/".$row['source'] :  "javascript:ShowLogin();";
+                //echo $link;
+                echo 'json.push(new Book("'.$row['title'].'",
+                        "'.$row['description'].'",
+                        "'.$row['cover'].'",
+                        "'.$row['pages'].'",
+                        "'.$row['author'].'",
+                        "'.printf("%.2f",$row['rating']).'",
+                        "audio/book1.mp3",
+                        "'.$link.'"));' . "\n\n\t\t";
             }
         ?>
     </script>
