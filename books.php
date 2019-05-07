@@ -159,12 +159,6 @@
                         "'.printf("%.2f",$row['rating']).'",
                         "audio/book1.mp3",
                         "'.$link.'"));' . "\n\n\t\t";
-"'.$row['pages'].'",
-                        "'.$row['author'].'",
-                        "'.printf("%.2f",$row['rating']).'",
-                        "audio/book1.mp3",
-                        "'.$link.'"));' . "\n\n\t\t";
-
 
 
 
