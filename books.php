@@ -141,7 +141,12 @@
     </div>
 
     <script>
-   
+        function ShowLogin(){
+            document.getElementById('Login').style.display = 'block';
+        }
+
+                }
+        ?>
     </script>
 
     <?php include("footer.php");?>
