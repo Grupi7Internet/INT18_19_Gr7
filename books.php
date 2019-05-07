@@ -135,7 +135,14 @@
 		</div>
 	</div>
 
+    <div id="Login" style="display: none;">
+        <div><a href="login.php">LOGIN</a></div>
+        <div><a href="registration.php">REGISTER</a></div>
+    </div>
 
+    <script>
+   
+    </script>
 
     <?php include("footer.php");?>
 </body>
