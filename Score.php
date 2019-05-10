@@ -27,6 +27,15 @@
 	}
 
 ?>
-
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table border="1">
+		<tr><th>USER</th><th>SCORE</th></tr>
+		<?php echo $table; ?>
+	</table>
 </body>
 </html>
