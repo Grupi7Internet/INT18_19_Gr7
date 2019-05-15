@@ -60,6 +60,7 @@
 
 	function addCourse (){
 		global $conn;
+
 		
 		$title = $_POST['Ctitle'];
 		$prof = $_POST['Cprof'];
