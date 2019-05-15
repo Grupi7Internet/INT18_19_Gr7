@@ -53,8 +53,8 @@
 		$img = $_POST['Gimg'];
 		$source = $_POST['Glink'];
 		$gadget = new Gadget($img,$title,$source);
-		$gadget->SaveToDb();
 	
+		$gadget->SaveToDb();
 
 	}
 
