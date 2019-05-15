@@ -54,6 +54,8 @@
 		$source = $_POST['Glink'];
 		$gadget = new Gadget($img,$title,$source);
 		$gadget->SaveToDb();
+	
+
 	}
 
 	function addCourse (){
