@@ -64,9 +64,9 @@
 
 		$title = $_POST['Ctitle'];
 		$prof = $_POST['Cprof'];
-
+		//insertimi
 		$query = "INSERT INTO courses(ctitle,cProfesor) VALUES('$title','$prof')";
 		mysqli_query($conn, $query);
-		
+
 	}
 ?>
