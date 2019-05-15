@@ -61,9 +61,10 @@
 	function addCourse (){
 		global $conn;
 
-		
+
 		$title = $_POST['Ctitle'];
 		$prof = $_POST['Cprof'];
+		
 		$query = "INSERT INTO courses(ctitle,cProfesor) VALUES('$title','$prof')";
 		mysqli_query($conn, $query);
 	}
