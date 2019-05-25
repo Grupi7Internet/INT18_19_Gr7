@@ -14,7 +14,8 @@ Book.prototype.audioType = "mp3";
 Book.prototype.fileType = "pdf";
 
 
-var Book1 = new Book("City on The Edge",
+
+/*var Book1 = new Book("City on The Edge",
         "Anyone who tries to make a distinction between education and entertainment doesn’t know the first thing about either",
         "images/book1.jpeg",
         "200",
@@ -24,9 +25,7 @@ var Book1 = new Book("City on The Edge",
         "files/1.pdf");
 
 
-Book1.ToStr = function(){
-    return this.name +" "+this.author;
-}
+
 
 var Book2 = new Book("Red Cloks",
         "Anyone who tries to make a distinction between education and entertainment doesn’t know the first thing about either",
@@ -72,7 +71,7 @@ var Book6 = new Book("City on The Edge",
         "8.0",
         "audio/book1.mp3",
         "files/1.pdf");
-
+*/
 /*var json = [{
         "name": "City on The Edge",
         "description": "Anyone who tries to make a distinction between education and entertainment doesn’t know the first thing about either",
@@ -131,7 +130,7 @@ var Book6 = new Book("City on The Edge",
 ]*/
 
 
-json = [Book1,Book2,Book3,Book4,Book5,Book6];
+json = [];
 
 var index = 0;
 

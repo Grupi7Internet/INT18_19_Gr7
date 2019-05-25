@@ -1,4 +1,20 @@
+<?php 
+    session_start();
+    require_once("connectDB.php");
+    $html = "";
+    if(isUserLogedIn()){
+        $email = (isset($_SESSION['user_id'])) ? $_SESSION['user_id'] : $_COOKIE['u_email'];
+        $html = '<span>'.$email.'</span> |
+            <a target="_blank" href="logout.php"><u>Logout</u></a> ';
 
+    } else {
+        $html = '<a target="_blank" href="registration.php"><u>Register</u></a> |
+            <a target="_blank" href="login.php"><u>Student Login</u></a>';
+    }
+?>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
 <header>
     <div id="top" class="">
         <div class="socialNetworks">
@@ -14,6 +30,7 @@
                 <img width="30" alt="linku per newsfeed" title="RSS Feed" src="images/newsfeed60x60.png"></a>
         </div>
         <div class="onToplinks">
+            <?php echo $html; ?>
             <p id="LastVisited" style="text-align: right;color: #929292;margin-top: 7px; font-size: 10pt;"></p>
 
         </div>
@@ -21,9 +38,16 @@
     <div id="logoContainer" class="">
         <a class="time4shcool" href="index.php">Time 4 School</a>
         <form id="search" action="#" method="POST">
-           <input type="search" name="search" autocomplete="off" size="20" placeholder="search our website..">
+           <input type="search" name="search" autocomplete="off" onkeyup="ELTI(this);" size="20" placeholder="search our website..">
            <script>
-                
+                function ELTI(input){
+                    var keyword = input.value;
+                    $("#SearchContent").find("ul").empty();
+                    if(keyword.length > 2){
+                        $("#SearchContent").find("ul").load("search.php?k="+encodeURI(keyword));
+                    }
+
+                }
            </script>
            <input type="submit" value="Search">
            <div id="SearchContent">

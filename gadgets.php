@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+    session_start();
+    require("connectDB.php");
+    $loggedin = isUserLogedIn();
+?>
+<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="utf-8">
@@ -73,11 +78,21 @@
 	</script>
 	
     <script type="text/javascript">
-      
+      function dropdown(){
+        $("#dropdown").slideToggle();
+      }
+
+       function ShowLogin(){
+            document.getElementById('FullDiv').style.display = 'block';
+        }
+
+       function Login(){
+            location.href= "login.php?r="+encodeURI(location.href);
+       } 
 
   </script>
 </head>
-<body >
+<body style="color: rgba(0,0,0,.65)" >
 <?php require("header.php"); ?>    
 
         <div class="LinksAboutTech">

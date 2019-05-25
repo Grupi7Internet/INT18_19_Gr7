@@ -12,7 +12,7 @@
 Video.prototype.audioType = "mp4";
 
 
-var Video1 = new Video("Fiek",
+/*var Video1 = new Video("Fiek",
         "Anyone who tries to make a distinction between education and entertainment doesn’t know the first thing about either",
         "images/js.jpeg",
         "200",
@@ -64,10 +64,10 @@ var Video5 = new Video("Fiek",
         "200",
         "Eltion Musa",
         "8.0",
-        "videos/5.mp4");
+        "videos/5.mp4");*/
 
 
-json = [Video1,Video2,Video3,Video4,Video5,Video1,Video2,Video3];
+json = [];
 
 var index = 0;
 
@@ -110,5 +110,7 @@ function closeFullDiv() {
 function changeBook(element) {
     //alert(json[index].video);
     index = element.getAttribute("data-index");
+
     document.getElementById("video").src = json[index].video;
+    document.getElementsByTagName("h2")[0].innerHTML = json[index].name;
 }

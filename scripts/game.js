@@ -1,4 +1,4 @@
-var rightPressed = false;
+		var rightPressed = false;
 		var leftPressed = false;
 		var topPressed = false;
 		var downPressed = false;
@@ -28,7 +28,7 @@ window.onload = function(){
 		var tspeedx = 2;
 		var tspeedy = -2;
 		var score = 100;
-		var scoreSpan = document.getElementById("score");
+		var scoreSpan = document.getElementById("score").childNodes[0];
 
 		GetBestScore();
 
@@ -90,6 +90,7 @@ window.onload = function(){
 			if((x+2*radius) <= (xt+15) && x >=  (xt-15) && (y+2*radius) <= (yt+15) && y >= (yt-15)){
 				drawText("FITORE!");
 				DrawMan(0,Math.PI,60);
+				$.post("Score.php",{score:score});
 				UpdateBestScore(score);
 			}
 			radius+=0.003;
@@ -105,7 +106,7 @@ window.onload = function(){
 		}
 
 		function RelodeGame(){
-			location.reload();			
+			//location.reload();			
 		}
 
 		function UpdateBestScore(currentScore){
@@ -131,7 +132,7 @@ window.onload = function(){
 
 		function Score(){
 			score = 100 - (radius-10)/5*100;
-			scoreSpan.textContent=Math.round(score);
+			//scoreSpan.nodeValue=Math.round(score);
 		}
 
 		DrawMan(Math.PI,Math.PI*2,70);

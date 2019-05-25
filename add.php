@@ -53,20 +53,14 @@
 		$img = $_POST['Gimg'];
 		$source = $_POST['Glink'];
 		$gadget = new Gadget($img,$title,$source);
-	
-
 		$gadget->SaveToDb();
 	}
 
 	function addCourse (){
 		global $conn;
-
-
 		$title = $_POST['Ctitle'];
 		$prof = $_POST['Cprof'];
-		//insertimi
 		$query = "INSERT INTO courses(ctitle,cProfesor) VALUES('$title','$prof')";
 		mysqli_query($conn, $query);
-
 	}
 ?>

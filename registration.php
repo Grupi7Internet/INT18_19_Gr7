@@ -1,5 +1,11 @@
 <?php 
+	error_reporting(E_ALL);
+	ini_set('display_errors', 1);
+	require('connectDB.php'); 
 	
+	$errors = array();
+	$all = "[]";
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
 		$name =$_POST['name'];
 		$gender = ($_POST['gender'] == 'male') ? 0 : 1;
 		$lname =$_POST['lname'];
@@ -12,7 +18,6 @@
 		$termOfUse =$_POST['termOfUse'];
 		//echo $gender . "    " . $status;
 
-
 		if(empty($name)){
 			$errors[] = "name";
 		}
@@ -21,7 +26,25 @@
 			$errors[] = "lname";
 		}
 
-	
+		if(empty($email) || !preg_match('#^[\w\.]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$#',$email)){
+			$errors[] = "email";
+		}
+		if(empty($phone)){
+			$errors[] = "phone";
+		}
+		if(empty($bday) || time() < strtotime($bday)){
+			$errors[] = "bday";
+		}	
+
+		if(empty($password) || !StrongPass($password)){
+			$errors[] = "password";
+		}
+		if($password!=$password1)
+		{
+			$errors[] = "passwordnot";
+		}
+		if(!isset($status)){
+			$errors[] = "status";
 		}		
 		if(!isset($gender)){
 			$errors[] = "gender";
@@ -29,10 +52,31 @@
 		if(empty($termOfUse) ){
 			$errors[] = "termOfUse";
 		}
+		if(sizeof($errors) == 0){
+			$salt = generateRandomString();
+			$passHash = sha1($password.$salt);
+			$insert = [$name,$lname,$email,$bday,$salt,$passHash,$phone,$gender,$status];
+			
+			array_walk($insert, "sqlInjection");
+
+			$query = "INSERT INTO infos () VALUES ('{$insert[0]}','{$insert[1]}','{$insert[2]}','{$insert[3]}','{$insert[4]}','{$insert[5]}','{$insert[6]}',{$insert[7]},{$insert[7]},'0','')";
+			echo $query;
+			mysqli_query($conn, $query);
+			header("Location: reg.php?email=".$email );
+			die();		
+		}
+		$all = "['$name','$gender','$lname','$email','$bday','$status','$password','$phone','$termOfUse']";
 	}
 
+	function sqlInjection(&$value){
+		global $conn;
+		$value = mysqli_real_escape_string($conn,$value);
+	}
 
-	
+	function StrongPass($pass){
+		$pattern = "#^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.{8,})#";
+		return preg_match($pattern, $pass);
+	}
 
 	$errorString = '["'.implode('","',$errors).'"]';
 	//echo $errorString;
@@ -214,27 +258,17 @@ form input[type="date"] {
 			}
 		}
 
-		var a = ["name","gender","lname","email","bday","status","password","phone","termOfUse"];
-		for(var i = 0; i < a.length; i++){
-			if(!errors.includes(a[i])){
-				if(a[i] == "gender" || a[i] == "status" || a[i] == "termOfUse"){
-					$("[value='"+b[i]+"']").prop('checked',true);
-				}else{
-					$("[name='"+a[i]+"']").attr("value",b[i]);
-				}
-			}
-		}
-		var a = ["name","gender","lname","email","bday","status","password","phone","termOfUse"];
-		for(var i = 0; i < a.length; i++){
-			if(!errors.includes(a[i])){
-				if(a[i] == "gender" || a[i] == "status" || a[i] == "termOfUse"){
-					$("[value='"+b[i]+"']").prop('checked',true);
-				}else{
-					$("[name='"+a[i]+"']").attr("value",b[i]);
-				}
-			}
-		}
-
+		function checkUser(a){
+			var url = "checkUser.php?email="+a.value;
+			$.getJSON(url, function(result){
+      			if(result['error'] == 1){
+      				$("#registred").show();
+      			}else{
+      				$("#registred").hide();
+      			}
+			});
+		}	
+	</script>
 
 </body>
 </html>

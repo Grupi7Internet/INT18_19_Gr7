@@ -159,11 +159,6 @@
                         "'.printf("%.2f",$row['rating']).'",
                         "audio/book1.mp3",
                         "'.$link.'"));' . "\n\n\t\t";
-
-
-
-
-
             }
         ?>
     </script>

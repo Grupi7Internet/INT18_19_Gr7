@@ -1,3 +1,11 @@
+<?php
+	require("connectDB.php");
+	if(!isAdminLogedIn()){
+		header("Location: adminlogin.php");
+		die();	
+	}
+?>	
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +19,7 @@
 				<select id="aaa" name="type" onchange="addtodb()" >
 					<option value="Book">Literature</option>
 					<option value="Video">Video</option>
+					<option value="Gadgets">Gadgets</option>
 					<option value="Course">Course</option>
 				</select>
 
@@ -86,73 +95,18 @@
 						C.style.display = 'none';
 						P.style.display = 'none';
 						F.style.display = 'inline';
-					}
-				}
-
-
-
-
-		</script>
-
-
-		<script type="text/javascript">
-				
-				function addtodb()
-				{ 
-					var a = document.getElementById("aaa").selectedIndex;
-					var L = document.getElementById("Literature");
-					var V = document.getElementById("Video");
-					var P = document.getElementById("Photo");
-					var C = document.getElementById("Course");
-					var F = document.getElementById("file");
-
-					if(a == 0){
-						L.style.display = 'inline';
-						V.style.display = 'none';
-						P.style.display = 'none';
-						C.style.display = 'none';
-						F.style.display = 'inline';
-					}else if(a == 1){
+					}else if(a == 2){
 						L.style.display = 'none';
-						V.style.display = 'block';
-						C.style.display = 'none';
-						P.style.display = 'none';
-						F.style.display = 'inline';
-					}
-				}
-
-
-
-
-		</script>
-
-		<script type="text/javascript">
-				
-				function addtodb()
-				{ 
-					var a = document.getElementById("aaa").selectedIndex;
-					var L = document.getElementById("Literature");
-					var V = document.getElementById("Video");
-					var P = document.getElementById("Photo");
-					var C = document.getElementById("Course");
-					var F = document.getElementById("file");
-
-					if(a == 0){
-						L.style.display = 'inline';
 						V.style.display = 'none';
-						P.style.display = 'none';
-
-						L.style.display = 'inline';
-						V.style.display = 'none';
-						P.style.display = 'none';
 						C.style.display = 'none';
-						F.style.display = 'inline';
-					}else if(a == 1){
+						P.style.display = 'block';
+						F.style.display = 'none';
+					}else {
 						L.style.display = 'none';
-						V.style.display = 'block';
-						C.style.display = 'none';
+						V.style.display = 'none';
+						C.style.display = 'block';
 						P.style.display = 'none';
-						F.style.display = 'inline';
+						F.style.display = 'none';
 					}
 				}
 
