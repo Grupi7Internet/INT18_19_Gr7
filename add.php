@@ -58,6 +58,7 @@
 		$gadget = new Gadget($img,$title,$source);
 		$gadget->SaveToDb();
 	}
+	
 
 	function addCourse (){
 		global $conn;
