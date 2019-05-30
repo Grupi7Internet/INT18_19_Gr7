@@ -50,6 +50,7 @@
 		$video->SaveToDb();
 	}
 
+
 	function addGadgets (){
 		$title = $_POST['Gtitle'];
 		$img = $_POST['Gimg'];
