@@ -34,6 +34,7 @@
 		$book->SaveToDb();
 	}
 
+
 	function addVideo (){
 		$title = $_POST['Vtitle'];
 		$author = $_POST['Vauthor'];
