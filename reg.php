@@ -24,7 +24,7 @@
 		
 	}elseif (isset($_GET["activation"])) {
 		$hash = $_GET["activation"];
-		$e = mysqli_real_escape_string($_GET["e"]);
+		$e = mysqli_real_escape_string($conn,$_GET["e"]);
 		$query = "UPDATE infos SET confirmed = 'yes' WHERE email = '$e' and confirmed = '$hash';";
 		mysqli_query($conn, $query);
 		echo("Your account is atived. <a href='../' >Go to main page</a>");

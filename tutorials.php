@@ -91,7 +91,7 @@
                     $q = "SELECT * FROM courses;";
                     $result = $conn->query($q);
                     while($row = $result->fetch_assoc()){
-                        echo "<li><a style='color:white;' href='tutorials.php?cid=".$row['cid']."'>".$row['ctitle']."</a></li>";
+                        echo "<li><a style='color:white;text-decoration: underline;' href='tutorials.php?cid=".$row['cid']."'>".$row['ctitle']."</a></li>";
                     }
                 ?>
             </ul>

@@ -125,7 +125,7 @@
 				<img src="images/close.png" width="100%">
 			</div>
 			<h3 style="color: white;">Audio Book</h3>
-			<audio id="audio" controls autoplay>
+			<audio id="audio" controls >
 			</audio>
 			<div style="margin-top: 20px;">
                 <a id="pdf" href="" target="_blank">
@@ -156,7 +156,7 @@
                         "'.$row['cover'].'",
                         "'.$row['pages'].'",
                         "'.$row['author'].'",
-                        "'.printf("%.2f",$row['rating']).'",
+                        "'.$row['rating'].'",
                         "audio/book1.mp3",
                         "'.$link.'"));' . "\n\n\t\t";
             }

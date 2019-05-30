@@ -145,7 +145,7 @@
             <div id="Login">
                 <p style="font-style: medium; text-align: center;">You should login to continue. If you don't have an<br /> account please register.</p>
                 <div onclick="Login();">LOGIN</div>
-                <div>REGISTER</div>
+                <div><a style="color: white;" href="registration.php">REGISTER</a></div>
             </div>
         </div>
 

@@ -10,7 +10,7 @@
 		$gender = ($_POST['gender'] == 'male') ? 0 : 1;
 		$lname =$_POST['lname'];
 		$email =$_POST['email'];
-		$phone =$_POST['bday'];
+		$phone =$_POST['phone'];
 		$bday =$_POST['bday'];
 		$status = ($_POST['status'] == 'parent') ? 0 : 1;
 		$password =$_POST['password'];
@@ -29,7 +29,7 @@
 		if(empty($email) || !preg_match('#^[\w\.]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$#',$email)){
 			$errors[] = "email";
 		}
-		if(empty($phone)){
+		if(empty($phone) || !preg_match('#[\+\d]+#', $phone)){
 			$errors[] = "phone";
 		}
 		if(empty($bday) || time() < strtotime($bday)){
@@ -197,7 +197,7 @@ form input[type="date"] {
 			</p>
 
 			<br/>
-			<input id="pw" type="text" name="password" placeholder="Password" form="Form">
+			<input id="pw" type="password" name="password" placeholder="Password" form="Form">
 			<br/>
 			<div style="display: none;" class="error">
 				<p>Password should contain at least:</p>
@@ -207,7 +207,7 @@ form input[type="date"] {
 					<li>lentgh 8</li>
 				</ul>
 			</div>
-			<input type="text" placeholder="Confirm Password" name="password1">
+			<input type="password" placeholder="Confirm Password" name="password1">
 			<p style="display: none;" name="passwordnot"  class="error">Password does not match</p>
 			<p>Gender:</p>
 			<input type="radio" name="gender" value="male"> Male <br />

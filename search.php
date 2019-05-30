@@ -12,7 +12,14 @@
 		$query = "SELECT * FROM Books WHERE title LIKE '%".$keyword."%' OR author LIKE '%".$keyword."%';";
 		$result = $conn->query($query);
 		while ($row = $result->fetch_assoc()) {
-			$res .= "<li><a>".$row['title']."</li>";
+			$link = '';
+
+			if(isUserLogedIn()) { 
+				$link = "files/Books/".$row['source'] ;
+			}else{ 
+				$link = "javascript:location.href=\"login.php\";";
+			}
+			$res .= "<li><a style='color:white;' href='".$link."'>".$row['title']."</li>";
 		}
 	}
 
@@ -21,7 +28,14 @@
 		$query = "SELECT * FROM Videos WHERE title LIKE '%".$keyword."%' OR author LIKE '%".$keyword."%';";
 		$result = $conn->query($query);
 		while ($row = $result->fetch_assoc()) {
-			$res .= "<li>{$row['title']}</li>";
+			$link = '';
+
+			if(isUserLogedIn()) { 
+				$link = "files/Videos/".$row['source'] ;
+			}else{ 
+				$link = "javascript:location.href=\"login.php\";";
+			}
+			$res .= "<li><a  style='color:white;' href='".$link."'>".$row['title']."</li>";
 		}
 	}
 
@@ -30,7 +44,7 @@
 		$query = "SELECT * FROM gadgets WHERE title LIKE '%".$keyword."%';";
 		$result = $conn->query($query);
 		while ($row = $result->fetch_assoc()) {
-			$res .= "<li>{$row['title']}</li>";
+			$res .= "<li><a  style='color:white;'  href='".$row['link']."'>".$row['title']."</li>";
 		}
 	}
 

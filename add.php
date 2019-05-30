@@ -20,7 +20,6 @@
 	}
 
 
-
 	function addBook (){
 		$title = $_POST['title'];
 		$author = $_POST['author'];
@@ -33,7 +32,6 @@
 		$book = new Book($img,$title,$source,$pages,$author,$rating,$description);
 		$book->SaveToDb();
 	}
-
 
 	function addVideo (){
 		$title = $_POST['Vtitle'];
@@ -50,7 +48,6 @@
 		$video->SaveToDb();
 	}
 
-
 	function addGadgets (){
 		$title = $_POST['Gtitle'];
 		$img = $_POST['Gimg'];
@@ -58,7 +55,6 @@
 		$gadget = new Gadget($img,$title,$source);
 		$gadget->SaveToDb();
 	}
-	
 
 	function addCourse (){
 		global $conn;

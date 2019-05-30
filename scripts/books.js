@@ -210,6 +210,6 @@ function playBook() {
     var pdfLink = document.getElementById("pdf");
     document.getElementById("FullDiv").style.display = "block";
     audioPlayer.src = json[index].audio;
-    audioPlayer.play();
+    //audioPlayer.play();
     pdf.href = json[index].pdf;
 }

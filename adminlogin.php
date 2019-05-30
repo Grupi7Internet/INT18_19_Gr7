@@ -5,7 +5,7 @@
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 		$remember = $_POST["remember"];
-
+		$password = md5($password);
 		$query  = "SELECT username FROM admins WHERE username = '$username' AND passHash = '$password';";
 		$result =  mysqli_query($conn, $query); 
 
